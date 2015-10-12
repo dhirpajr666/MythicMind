@@ -9,3 +9,9 @@ semantic versioning since `1.0.0`.
 ### Planned
 
 - Streaming evaluation for large transcript batches (see ROADMAP).
+
+## [1.0.0] — 2026-05-26
+
+The first stable release. The two-lens contract is frozen: the Python CLI
+verbs, the fixture schema, and the runtime transcript format are now treated
+as stable interfaces.
