@@ -21,3 +21,9 @@ as stable interfaces.
   proves byte-identical replay on a clean runner.
 - Documentation pass: `docs/architecture.md` and `docs/scoring.md` brought in
   line with the frozen interfaces.
+
+### Changed
+- The runtime transcript format is documented and versioned alongside the
+  fixture schema.
+
+## [0.9.0] — 2025-06-17
