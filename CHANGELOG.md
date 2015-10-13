@@ -15,3 +15,9 @@ semantic versioning since `1.0.0`.
 The first stable release. The two-lens contract is frozen: the Python CLI
 verbs, the fixture schema, and the runtime transcript format are now treated
 as stable interfaces.
+
+### Added
+- `replay-check` on both example encounters, wired into CI so every push
+  proves byte-identical replay on a clean runner.
+- Documentation pass: `docs/architecture.md` and `docs/scoring.md` brought in
+  line with the frozen interfaces.
