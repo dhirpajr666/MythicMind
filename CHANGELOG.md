@@ -27,3 +27,9 @@ as stable interfaces.
   fixture schema.
 
 ## [0.9.0] — 2025-06-17
+
+### Added
+- Example encounters (`examples/encounters/`) and fixtures
+  (`examples/fixtures/`) covering a gate, a market and an oracle.
+- `Makefile` and `scripts/run_all.{sh,ps1}` convenience targets for both
+  lenses.
