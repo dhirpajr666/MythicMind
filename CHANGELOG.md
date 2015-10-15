@@ -33,3 +33,9 @@ as stable interfaces.
   (`examples/fixtures/`) covering a gate, a market and an oracle.
 - `Makefile` and `scripts/run_all.{sh,ps1}` convenience targets for both
   lenses.
+
+### Changed
+- `Npc` memory was bounded to a 16-entry ring buffer so long encounters stay
+  small and replayable.
+
+## [0.8.0] — 2024-05-21
