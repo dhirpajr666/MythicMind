@@ -45,3 +45,10 @@ as stable interfaces.
   last cross-runtime reproducibility risk.
 - `run` and `replay-check` console verbs in the C# runtime.
 
+### Changed
+- Goal selection now breaks priority ties by goal name for stable replay.
+
+## [0.7.0] — 2023-04-18
+
+### Added
+- The C# `Simulator`: a tick loop that selects goals, mutates world flags and
