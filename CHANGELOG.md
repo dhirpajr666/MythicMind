@@ -52,3 +52,9 @@ as stable interfaces.
 
 ### Added
 - The C# `Simulator`: a tick loop that selects goals, mutates world flags and
+  records every utterance into an `EncounterTranscript`.
+- `WorldState` snapshots with stable ordering for serialisation.
+
+### Fixed
+- Flag preconditions are evaluated against a frozen view of the world at the
+  start of each tick, so goal order cannot leak state mid-tick.
