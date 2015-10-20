@@ -39,3 +39,9 @@ as stable interfaces.
   small and replayable.
 
 ## [0.8.0] — 2024-05-21
+
+### Added
+- `DeterministicRng` (SplitMix64) replacing `System.Random`, removing the
+  last cross-runtime reproducibility risk.
+- `run` and `replay-check` console verbs in the C# runtime.
+
