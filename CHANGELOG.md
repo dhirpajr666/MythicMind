@@ -64,3 +64,9 @@ as stable interfaces.
 ### Added
 - `explain` and `batch` subcommands: per-axis reasoning chains and aggregate
   text/JSON reports with threshold flagging.
+- `report.py` `BatchReport` with axis means and per-fixture ordering.
+
+### Changed
+- `eval` output now rounds to three decimals consistently with the report.
+
+## [0.5.0] — 2020-12-01
