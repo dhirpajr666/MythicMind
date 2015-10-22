@@ -58,3 +58,9 @@ as stable interfaces.
 ### Fixed
 - Flag preconditions are evaluated against a frozen view of the world at the
   start of each tick, so goal order cannot leak state mid-tick.
+
+## [0.6.0] — 2022-02-08
+
+### Added
+- `explain` and `batch` subcommands: per-axis reasoning chains and aggregate
+  text/JSON reports with threshold flagging.
