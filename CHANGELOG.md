@@ -70,3 +70,9 @@ as stable interfaces.
 - `eval` output now rounds to three decimals consistently with the report.
 
 ## [0.5.0] — 2020-12-01
+
+### Added
+- `goals` and `latency` axes, completing the four-axis model.
+- Explicit weights (`0.30 / 0.30 / 0.30 / 0.10`) so the overall score is a
+  plain, inspectable weighted mean.
+
