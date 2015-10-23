@@ -82,3 +82,9 @@ as stable interfaces.
 
 ## [0.4.0] — 2019-01-22
 
+### Added
+- The first `BatchReport` skeleton rolling fixture scores into a single text
+  summary.
+
+### Fixed
+- Fixture loading tolerates missing optional fields with documented defaults
