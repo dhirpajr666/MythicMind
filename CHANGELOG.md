@@ -76,3 +76,9 @@ as stable interfaces.
 - Explicit weights (`0.30 / 0.30 / 0.30 / 0.10`) so the overall score is a
   plain, inspectable weighted mean.
 
+### Changed
+- Every axis now returns reasons alongside its value; no bare numbers are
+  printed anywhere.
+
+## [0.4.0] — 2019-01-22
+
