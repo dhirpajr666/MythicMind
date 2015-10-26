@@ -88,3 +88,9 @@ as stable interfaces.
 
 ### Fixed
 - Fixture loading tolerates missing optional fields with documented defaults
+  rather than raising on incomplete recordings.
+
+## [0.3.0] — 2017-12-19
+
+### Added
+- `consistency` and `safety` heuristics, including the small inspectable
