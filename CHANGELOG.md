@@ -94,3 +94,21 @@ as stable interfaces.
 
 ### Added
 - `consistency` and `safety` heuristics, including the small inspectable
+  unsafe-content lexicon.
+- `Persona.forbidden` support with a documented penalty curve.
+
+## [0.2.0] — 2016-12-06
+
+### Added
+- First example fixture (`gatekeeper-oath.json`) and the `Fixture` JSON loader
+  with validation for the persona, scenario and dialogue sections.
+- `python -m mythicmind eval <fixture>` as the first CLI verb.
+
+## [0.1.0] — 2015-11-14
+
+### Added
+- Initial repository layout: the two-lens design sketch (Python evaluation
+  harness plus deterministic C# encounter runtime), licensing and the
+  package skeleton under `pylab/mythicmind/`.
+
+<!-- draft note 1 -->
