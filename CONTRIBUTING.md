@@ -11,3 +11,6 @@ encounter runtime under `runtime/` — that meet only through JSON on disk.
 
 ```bash
 cd pylab
+python -m compileall mythicmind
+python -m mythicmind batch ../examples/fixtures
+python -m mythicmind explain ../examples/fixtures/gatekeeper-oath.json
