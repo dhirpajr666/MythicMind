@@ -9,3 +9,5 @@ encounter runtime under `runtime/` — that meet only through JSON on disk.
 - **Python 3.10+** for the evaluation lens. There is nothing to install; the
   package uses the standard library only.
 
+```bash
+cd pylab
