@@ -16,3 +16,5 @@ python -m mythicmind batch ../examples/fixtures
 python -m mythicmind explain ../examples/fixtures/gatekeeper-oath.json
 ```
 
+- **.NET SDK 9.0** for the runtime lens.
+
