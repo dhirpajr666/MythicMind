@@ -23,3 +23,6 @@ dotnet build -c Release runtime/MythicMind.Runtime.csproj
 dotnet run -c Release --project runtime -- replay-check examples/encounters/the-night-gate.json
 ```
 
+## Before you open a pull request
+
+1. `python -m compileall mythicmind` must pass and the CLI must run against the
