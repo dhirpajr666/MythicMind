@@ -18,3 +18,6 @@ python -m mythicmind explain ../examples/fixtures/gatekeeper-oath.json
 
 - **.NET SDK 9.0** for the runtime lens.
 
+```bash
+dotnet build -c Release runtime/MythicMind.Runtime.csproj
+dotnet run -c Release --project runtime -- replay-check examples/encounters/the-night-gate.json
