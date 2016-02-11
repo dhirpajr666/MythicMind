@@ -26,3 +26,5 @@ dotnet run -c Release --project runtime -- replay-check examples/encounters/the-
 ## Before you open a pull request
 
 1. `python -m compileall mythicmind` must pass and the CLI must run against the
+   example fixtures (both from `pylab/`).
+2. `dotnet build -c Release runtime/MythicMind.Runtime.csproj` must succeed if
