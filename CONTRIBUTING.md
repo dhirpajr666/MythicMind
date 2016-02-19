@@ -30,3 +30,6 @@ dotnet run -c Release --project runtime -- replay-check examples/encounters/the-
 2. `dotnet build -c Release runtime/MythicMind.Runtime.csproj` must succeed if
    `runtime/` was touched, and both example encounters must pass `replay-check`.
 3. Every new scoring rule needs a written rationale in the reason list and a
+   fixture that demonstrates it.
+4. Keep the Python lens dependency-free; the zero-dependency rule is part of
+   the design contract.
