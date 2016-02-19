@@ -4,3 +4,6 @@
 # on the reference environment (Python 3.11, .NET SDK 9.0.101).
 
 PY       ?= python
+DOTNET   ?= dotnet
+FIXTURES  = examples/fixtures
+ENCOUNTERS = examples/encounters
