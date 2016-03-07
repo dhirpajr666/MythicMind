@@ -9,3 +9,6 @@ FIXTURES  = examples/fixtures
 ENCOUNTERS = examples/encounters
 
 .PHONY: all py py-json dotnet dotnet-run replay clean help
+
+help:
+	@echo "MythicMind targets:"
