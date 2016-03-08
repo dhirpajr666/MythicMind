@@ -12,3 +12,5 @@ ENCOUNTERS = examples/encounters
 
 help:
 	@echo "MythicMind targets:"
+	@echo "  make py        - run the Python batch report over example fixtures"
+	@echo "  make py-json   - same, but emit JSON"
