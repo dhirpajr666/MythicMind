@@ -14,3 +14,6 @@ help:
 	@echo "MythicMind targets:"
 	@echo "  make py        - run the Python batch report over example fixtures"
 	@echo "  make py-json   - same, but emit JSON"
+	@echo "  make dotnet    - build the C# runtime (Release)"
+	@echo "  make dotnet-run- run an example encounter and print a transcript"
+	@echo "  make replay    - prove both example encounters replay deterministically"
