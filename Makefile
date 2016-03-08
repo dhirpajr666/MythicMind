@@ -17,3 +17,5 @@ help:
 	@echo "  make dotnet    - build the C# runtime (Release)"
 	@echo "  make dotnet-run- run an example encounter and print a transcript"
 	@echo "  make replay    - prove both example encounters replay deterministically"
+	@echo "  make all       - run the Python report and the C# replay check"
+	@echo "  make clean     - remove build artefacts"
