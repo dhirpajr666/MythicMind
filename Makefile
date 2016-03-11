@@ -19,3 +19,6 @@ help:
 	@echo "  make replay    - prove both example encounters replay deterministically"
 	@echo "  make all       - run the Python report and the C# replay check"
 	@echo "  make clean     - remove build artefacts"
+
+all: py replay
+
