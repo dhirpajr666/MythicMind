@@ -27,3 +27,6 @@ py:
 
 py-json:
 	cd pylab && $(PY) -m mythicmind batch ../$(FIXTURES) --json
+
+dotnet:
+	$(DOTNET) build -c Release runtime/MythicMind.Runtime.csproj
