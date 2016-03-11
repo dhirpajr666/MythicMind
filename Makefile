@@ -24,3 +24,6 @@ all: py replay
 
 py:
 	cd pylab && $(PY) -m mythicmind batch ../$(FIXTURES)
+
+py-json:
+	cd pylab && $(PY) -m mythicmind batch ../$(FIXTURES) --json
