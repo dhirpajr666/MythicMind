@@ -22,3 +22,5 @@ help:
 
 all: py replay
 
+py:
+	cd pylab && $(PY) -m mythicmind batch ../$(FIXTURES)
