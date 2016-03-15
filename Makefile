@@ -32,3 +32,6 @@ dotnet:
 	$(DOTNET) build -c Release runtime/MythicMind.Runtime.csproj
 
 dotnet-run: dotnet
+	$(DOTNET) run -c Release --project runtime -- run $(ENCOUNTERS)/the-night-gate.json --pretty
+
+replay: dotnet
