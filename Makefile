@@ -30,3 +30,5 @@ py-json:
 
 dotnet:
 	$(DOTNET) build -c Release runtime/MythicMind.Runtime.csproj
+
+dotnet-run: dotnet
