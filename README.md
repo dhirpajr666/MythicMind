@@ -29,3 +29,14 @@ Score hand-authored transcripts with Python alone, or drive the C# runtime and p
 ```
    examples/fixtures/*.json                     examples/encounters/*.json
             |                                              |
+            v                                              v
+   +------------------+     transcripts (JSON)     +---------------------+
+   |  PYTHON LENS     | <------------------------- |   C# .NET 9 LENS     |
+   |  scores + reports|                            |  world, goals,       |
+   |  four heuristics |                            |  memory, replay      |
+   +--------+---------+                            +---------------------+
+            |
+            v
+   report (text or JSON): consistency, goals, safety, latency
+```
+
