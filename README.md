@@ -40,3 +40,15 @@ Score hand-authored transcripts with Python alone, or drive the C# runtime and p
    report (text or JSON): consistency, goals, safety, latency
 ```
 
+The Python lens judges behaviour. The C# lens produces it.
+
+---
+
+## The scoring model
+
+<p align="center">
+  <img src="docs/assets/evaluation-constellation.svg" alt="The four-axis weighted score: consistency, goals, safety, latency" width="640"/>
+</p>
+
+The `pylab/` package is written against the Python standard library only. There is no `requirements.txt` and nothing to pin. The reasoning is deliberate: an evaluation you cannot read is one you cannot trust. Every score traces back by hand to a short list of arithmetic reasons.
+
