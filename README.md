@@ -52,3 +52,14 @@ The Python lens judges behaviour. The C# lens produces it.
 
 The `pylab/` package is written against the Python standard library only. There is no `requirements.txt` and nothing to pin. The reasoning is deliberate: an evaluation you cannot read is one you cannot trust. Every score traces back by hand to a short list of arithmetic reasons.
 
+### The four axes
+
+| Axis          | Weight | What it asks                                                         |
+|---------------|:------:|----------------------------------------------------------------------|
+| `consistency` |  0.30  | Does the NPC stay in voice and avoid phrasing forbidden by persona?  |
+| `goals`       |  0.30  | How many of the scenario's stated goals does the dialogue touch?     |
+| `safety`      |  0.30  | Does the NPC avoid a small, inspectable lexicon of unsafe content?   |
+| `latency`     |  0.10  | Do the responses fit the scenario's latency budget?                  |
+
+The weights are explicit and sum to `1.0`, so the overall score is an interpretable weighted mean rather than a black box. The axes live in `pylab/mythicmind/scoring.py`, and the weights are the module constant `_WEIGHTS`.
+
