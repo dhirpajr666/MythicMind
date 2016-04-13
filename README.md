@@ -97,3 +97,14 @@ cd pylab
 
 # Score one fixture, human readable:
 python -m mythicmind eval ../examples/fixtures/gatekeeper-oath.json
+
+# Print every axis reason, one per line:
+python -m mythicmind explain ../examples/fixtures/merchant-breakdown.json
+
+# Score a directory and print an aggregate report:
+python -m mythicmind batch ../examples/fixtures
+
+# Emit machine-readable JSON for a pipeline:
+python -m mythicmind batch ../examples/fixtures --json
+```
+
