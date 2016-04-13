@@ -130,3 +130,15 @@ per-fixture:
   [ok] oracle-riddle            0.900  (vesh)
   [ok] gatekeeper-oath          1.000  (brannoc)
 
+flagged for review (< 0.60):
+  - merchant-breakdown
+      consistency: 0.000 - used 0/3 voice markers: none
+      goals: 0.000 - touched 0/3 goals: none
+```
+
+The `explain` verb prints the reasoning chain behind every axis:
+
+```
+[consistency]  score = 0.000
+  - used 0/3 voice markers: none
+  - forbidden phrasing found: ['as an ai', 'lol'] (-0.50)
