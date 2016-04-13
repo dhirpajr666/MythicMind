@@ -74,3 +74,14 @@ A fixture is one unit of evaluation: a persona, a scenario, and a recorded dialo
     "npc_id": "brannoc",
     "name": "Brannoc the Gatekeeper",
     "traits": ["dutiful", "gruff"],
+    "voice_markers": ["by the old oath", "the gate stays shut", "traveller"],
+    "forbidden": ["as an ai", "lol"]
+  },
+  "scenario": {
+    "scenario_id": "night-arrival",
+    "summary": "A hooded traveller demands entry after dark.",
+    "goals": ["challenge the traveller", "protect the gate", "offer shelter at dawn"],
+    "latency_budget_ms": 800
+  },
+  "dialogue": [
+    { "speaker": "traveller", "text": "Open up!", "latency_ms": 0 },
