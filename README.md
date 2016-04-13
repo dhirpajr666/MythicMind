@@ -119,3 +119,14 @@ The three verbs (`eval`, `explain`, `batch`) are defined in `pylab/mythicmind/cl
 fixtures evaluated : 3
 overall mean score : 0.683
 
+axis means:
+  consistency  0.556  ###########
+  goals        0.667  #############
+  safety       0.833  #################
+  latency      0.667  #############
+
+per-fixture:
+  [!!] merchant-breakdown       0.150  (sella)
+  [ok] oracle-riddle            0.900  (vesh)
+  [ok] gatekeeper-oath          1.000  (brannoc)
+
