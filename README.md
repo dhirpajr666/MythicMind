@@ -85,3 +85,15 @@ A fixture is one unit of evaluation: a persona, a scenario, and a recorded dialo
   },
   "dialogue": [
     { "speaker": "traveller", "text": "Open up!", "latency_ms": 0 },
+    { "speaker": "brannoc", "text": "Halt. By the old oath, the gate stays shut past dusk.", "latency_ms": 420 }
+  ]
+}
+```
+
+### Running the lens
+
+```bash
+cd pylab
+
+# Score one fixture, human readable:
+python -m mythicmind eval ../examples/fixtures/gatekeeper-oath.json
