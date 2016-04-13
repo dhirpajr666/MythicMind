@@ -108,3 +108,14 @@ python -m mythicmind batch ../examples/fixtures
 python -m mythicmind batch ../examples/fixtures --json
 ```
 
+The three verbs (`eval`, `explain`, `batch`) are defined in `pylab/mythicmind/cli.py`.
+
+### What a report shows
+
+```
+============================================================
+  MYTHICMIND - NPC BEHAVIOUR EVALUATION REPORT
+============================================================
+fixtures evaluated : 3
+overall mean score : 0.683
+
