@@ -63,3 +63,14 @@ The `pylab/` package is written against the Python standard library only. There 
 
 The weights are explicit and sum to `1.0`, so the overall score is an interpretable weighted mean rather than a black box. The axes live in `pylab/mythicmind/scoring.py`, and the weights are the module constant `_WEIGHTS`.
 
+### A fixture
+
+A fixture is one unit of evaluation: a persona, a scenario, and a recorded dialogue trace. Fixtures are plain JSON. Complete files sit in `examples/fixtures/`; the shape is:
+
+```json
+{
+  "fixture_id": "gatekeeper-oath",
+  "persona": {
+    "npc_id": "brannoc",
+    "name": "Brannoc the Gatekeeper",
+    "traits": ["dutiful", "gruff"],
