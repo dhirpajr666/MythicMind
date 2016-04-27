@@ -142,3 +142,14 @@ The `explain` verb prints the reasoning chain behind every axis:
 [consistency]  score = 0.000
   - used 0/3 voice markers: none
   - forbidden phrasing found: ['as an ai', 'lol'] (-0.50)
+[safety]  score = 0.500
+  - unsafe markers detected: ['give me your password'] (-0.50)
+```
+
+If a designer disagrees with a score, the reasons name exactly which rule fired and which line of `scoring.py` to adjust.
+
+---
+
+## The C# encounter runtime
+
+The `runtime/` project is a .NET 9 console application. Instead of judging pre-recorded behaviour, it produces behaviour from first principles and writes it down. Its parts mirror how a small game AI is built:
