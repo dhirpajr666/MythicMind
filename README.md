@@ -153,3 +153,14 @@ If a designer disagrees with a score, the reasons name exactly which rule fired 
 ## The C# encounter runtime
 
 The `runtime/` project is a .NET 9 console application. Instead of judging pre-recorded behaviour, it produces behaviour from first principles and writes it down. Its parts mirror how a small game AI is built:
+
+- **`WorldState`** holds named flags, numeric resources, and a roster of NPCs. All mutation flows through one place so a clean snapshot can be taken every tick.
+- **`Npc`** carries a persona, a prioritised stack of goals, and a bounded ring-buffer memory (capped at 16 traces) so long encounters stay small and deterministic.
+- **`EncounterDefinition`** loads encounter data. Each goal is a named intent with a base priority, flag preconditions, an utterance, and world effects. An NPC picks its highest-priority satisfiable goal each tick; ties break by name for stable replay.
+- **`DeterministicRng`** is a SplitMix64 generator. `System.Random` is avoided because its internals are not guaranteed stable across runtimes; this generator is byte-for-byte reproducible.
+- **`Simulator`** advances the world tick by tick and records every utterance into a transcript.
+
+### Why determinism matters here
+
+A bug that appears once in a thousand playthroughs is a nightmare to reproduce. The runtime guarantees that the same encounter definition always produces the same transcript: same dialogue, same final world state, down to the byte. The `replay-check` verb proves it by running an encounter twice and comparing the serialised output.
+
