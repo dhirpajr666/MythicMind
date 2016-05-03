@@ -221,3 +221,14 @@ dotnet run -c Release -- run ../examples/encounters/the-night-gate.json --out ..
 
 # 2. Author a fixture around that transcript, then:
 # 3. Judge behaviour with the Python lens.
+cd ../pylab
+python -m mythicmind batch ../examples/fixtures
+```
+
+Simulate, transcribe, evaluate, explain, refine, then run it again knowing every step is reproducible.
+
+---
+
+## Repository map
+
+```
