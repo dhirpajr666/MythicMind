@@ -209,3 +209,15 @@ Encounters are data, not code, so designers author them without recompiling:
 ### On Unity
 
 The runtime is plain .NET 9 with no engine dependencies. A serialisable world state, goal selection, bounded NPC memory, deterministic RNG, and JSON transcripts are the building blocks you would want when porting this core into a Unity project. To be clear, MythicMind is not a Unity package: it ships no `.unitypackage`, no `asmdef`, no `MonoBehaviour`, and has not been tested inside the Unity editor. It is an engine-agnostic core whose ideas port well, and nothing more is claimed.
+
+---
+
+## Closing the loop
+
+```bash
+# 1. Produce behaviour with the C# runtime.
+cd runtime
+dotnet run -c Release -- run ../examples/encounters/the-night-gate.json --out ../out/night-gate.json
+
+# 2. Author a fixture around that transcript, then:
+# 3. Judge behaviour with the Python lens.
