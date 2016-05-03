@@ -176,3 +176,14 @@ dotnet run -c Release -- run ../examples/encounters/the-night-gate.json --out tr
 # Prove the encounter replays deterministically:
 dotnet run -c Release -- replay-check ../examples/encounters/the-night-gate.json
 #  -> OK: 'the-night-gate' replays deterministically (2222 bytes).
+```
+
+### An encounter definition
+
+Encounters are data, not code, so designers author them without recompiling:
+
+```json
+{
+  "name": "the-night-gate",
+  "seed": 1337,
+  "ticks": 6,
