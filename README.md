@@ -164,3 +164,15 @@ The `runtime/` project is a .NET 9 console application. Instead of judging pre-r
 
 A bug that appears once in a thousand playthroughs is a nightmare to reproduce. The runtime guarantees that the same encounter definition always produces the same transcript: same dialogue, same final world state, down to the byte. The `replay-check` verb proves it by running an encounter twice and comparing the serialised output.
 
+```bash
+cd runtime
+
+# Simulate an encounter and print a JSON transcript:
+dotnet run -c Release -- run ../examples/encounters/the-night-gate.json --pretty
+
+# Or write it to a file:
+dotnet run -c Release -- run ../examples/encounters/the-night-gate.json --out transcript.json
+
+# Prove the encounter replays deterministically:
+dotnet run -c Release -- replay-check ../examples/encounters/the-night-gate.json
+#  -> OK: 'the-night-gate' replays deterministically (2222 bytes).
