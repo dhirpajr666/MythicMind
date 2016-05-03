@@ -187,3 +187,14 @@ Encounters are data, not code, so designers author them without recompiling:
   "name": "the-night-gate",
   "seed": 1337,
   "ticks": 6,
+  "flags": { "gate.open": "false", "time.dusk": "true" },
+  "npcs": [
+    {
+      "id": "brannoc",
+      "persona": "Dutiful gatekeeper bound by the old oath.",
+      "goals": [
+        {
+          "name": "hold-the-gate",
+          "priority": 3.0,
+          "line": "By the old oath, the gate stays shut past dusk.",
+          "requires": { "time.dusk": "true", "gate.open": "false" },
