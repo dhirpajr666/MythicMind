@@ -198,3 +198,14 @@ Encounters are data, not code, so designers author them without recompiling:
           "priority": 3.0,
           "line": "By the old oath, the gate stays shut past dusk.",
           "requires": { "time.dusk": "true", "gate.open": "false" },
+          "sets_flags": { "gate.challenged": "true" }
+        }
+      ]
+    }
+  ]
+}
+```
+
+### On Unity
+
+The runtime is plain .NET 9 with no engine dependencies. A serialisable world state, goal selection, bounded NPC memory, deterministic RNG, and JSON transcripts are the building blocks you would want when porting this core into a Unity project. To be clear, MythicMind is not a Unity package: it ships no `.unitypackage`, no `asmdef`, no `MonoBehaviour`, and has not been tested inside the Unity editor. It is an engine-agnostic core whose ideas port well, and nothing more is claimed.
