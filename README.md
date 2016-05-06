@@ -232,3 +232,14 @@ Simulate, transcribe, evaluate, explain, refine, then run it again knowing every
 ## Repository map
 
 ```
+mythicmind/
+├── README.md
+├── LICENSE                       (MIT)
+├── CHANGELOG.md
+├── ROADMAP.md
+├── Makefile
+├── .github/workflows/ci.yml
+├── scripts/
+│   ├── run_all.ps1
+│   └── run_all.sh
+├── docs/
