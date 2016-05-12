@@ -243,3 +243,14 @@ mythicmind/
 │   ├── run_all.ps1
 │   └── run_all.sh
 ├── docs/
+│   ├── architecture.md
+│   ├── scoring.md
+│   └── assets/
+│       ├── observatory-banner.svg
+│       └── evaluation-constellation.svg
+├── pylab/                        (the Python lens)
+│   ├── pyproject.toml
+│   └── mythicmind/
+│       ├── __init__.py
+│       ├── __main__.py
+│       ├── model.py
