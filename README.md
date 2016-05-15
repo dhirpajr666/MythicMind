@@ -254,3 +254,15 @@ mythicmind/
 │       ├── __init__.py
 │       ├── __main__.py
 │       ├── model.py
+│       ├── scoring.py
+│       ├── report.py
+│       └── cli.py
+├── runtime/                      (the C# lens)
+│   ├── MythicMind.Runtime.csproj
+│   └── src/
+│       ├── Program.cs
+│       ├── WorldState.cs
+│       ├── Npc.cs
+│       ├── EncounterDefinition.cs
+│       ├── Simulator.cs
+│       └── DeterministicRng.cs
