@@ -266,3 +266,14 @@ mythicmind/
 │       ├── EncounterDefinition.cs
 │       ├── Simulator.cs
 │       └── DeterministicRng.cs
+└── examples/
+    ├── fixtures/                 (Python evaluation inputs)
+    └── encounters/               (C# runtime inputs)
+```
+
+---
+
+## Building locally
+
+Both lenses have been compiled and run on the reference environment (Python 3.11, .NET SDK 9.0.101).
+
