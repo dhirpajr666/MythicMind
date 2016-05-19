@@ -8,3 +8,4 @@ Only implemented foundation work is checked.
 - [x] **M3 — Encounter runtime.** World state, NPC goals, bounded memory, seeded replay, and JSON transcripts.
 - [x] **M4 — Examples and automation.** Fixtures, encounters, documentation, scripts, and dual-language CI.
 
+## Planned
