@@ -9,3 +9,4 @@ Only implemented foundation work is checked.
 - [x] **M4 — Examples and automation.** Fixtures, encounters, documentation, scripts, and dual-language CI.
 
 ## Planned
+- [ ] Automated pytest and xUnit suites.
