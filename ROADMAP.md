@@ -11,3 +11,4 @@ Only implemented foundation work is checked.
 ## Planned
 - [ ] Automated pytest and xUnit suites.
 - [ ] Streaming evaluation for large transcript batches.
+- [ ] Lore-grounding and turn-coherence axes.
