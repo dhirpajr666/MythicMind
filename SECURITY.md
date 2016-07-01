@@ -2,3 +2,5 @@
 
 ## Supported versions
 
+| Version | Supported |
+|---------|-----------|
