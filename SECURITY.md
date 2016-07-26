@@ -5,3 +5,4 @@
 | Version | Supported |
 |---------|-----------|
 | 1.x     | Yes       |
+| 0.x     | No        |
