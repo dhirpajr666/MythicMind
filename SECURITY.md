@@ -6,3 +6,5 @@
 |---------|-----------|
 | 1.x     | Yes       |
 | 0.x     | No        |
+
+## Reporting a vulnerability
