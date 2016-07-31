@@ -8,3 +8,4 @@
 | 0.x     | No        |
 
 ## Reporting a vulnerability
+
