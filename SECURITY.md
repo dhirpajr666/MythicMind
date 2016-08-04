@@ -9,3 +9,4 @@
 
 ## Reporting a vulnerability
 
+MythicMind reads and evaluates recorded dialogue and simulated encounter data.
