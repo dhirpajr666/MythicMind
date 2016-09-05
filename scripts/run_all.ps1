@@ -8,3 +8,4 @@ Write-Host "== Python lens: batch evaluation ==" -ForegroundColor Cyan
 Push-Location pylab
 python -m mythicmind batch ..\examples\fixtures
 Pop-Location
+
