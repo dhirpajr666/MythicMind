@@ -4,3 +4,4 @@ $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location $root
 
+Write-Host "== Python lens: batch evaluation ==" -ForegroundColor Cyan
