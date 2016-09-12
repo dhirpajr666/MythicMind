@@ -9,3 +9,4 @@ Push-Location pylab
 python -m mythicmind batch ..\examples\fixtures
 Pop-Location
 
+Write-Host "`n== C# lens: build ==" -ForegroundColor Cyan
