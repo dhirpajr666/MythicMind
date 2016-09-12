@@ -10,3 +10,4 @@ python -m mythicmind batch ..\examples\fixtures
 Pop-Location
 
 Write-Host "`n== C# lens: build ==" -ForegroundColor Cyan
+dotnet build -c Release runtime\MythicMind.Runtime.csproj
