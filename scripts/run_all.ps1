@@ -13,3 +13,4 @@ Write-Host "`n== C# lens: build ==" -ForegroundColor Cyan
 dotnet build -c Release runtime\MythicMind.Runtime.csproj
 
 Write-Host "`n== C# lens: deterministic replay check ==" -ForegroundColor Cyan
+dotnet run -c Release --project runtime -- replay-check examples\encounters\the-night-gate.json
