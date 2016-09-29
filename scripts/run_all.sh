@@ -10,3 +10,5 @@ echo "== Python lens: batch evaluation =="
 
 echo
 echo "== C# lens: build =="
+dotnet build -c Release runtime/MythicMind.Runtime.csproj
+
