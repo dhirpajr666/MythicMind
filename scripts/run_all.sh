@@ -8,3 +8,4 @@ cd "$ROOT"
 echo "== Python lens: batch evaluation =="
 ( cd pylab && python -m mythicmind batch ../examples/fixtures )
 
+echo
