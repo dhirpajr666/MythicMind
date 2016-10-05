@@ -13,3 +13,4 @@ echo "== C# lens: build =="
 dotnet build -c Release runtime/MythicMind.Runtime.csproj
 
 echo
+echo "== C# lens: deterministic replay check =="
