@@ -5,3 +5,6 @@ ingests persona / scenario / dialogue fixtures (JSON), scores each transcript
 along four axes — consistency, goals, safety and latency — using transparent
 heuristics whose contributions are always reported, and rolls the per-fixture
 results up into batch reports.
+
+There is intentionally no machine-learning dependency: every score is a small,
+inspectable arithmetic combination so a designer can see *why* an NPC scored
