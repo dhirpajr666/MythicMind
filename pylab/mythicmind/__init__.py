@@ -3,3 +3,5 @@
 The Python package provides an explainable, stdlib-only evaluation harness. It
 ingests persona / scenario / dialogue fixtures (JSON), scores each transcript
 along four axes — consistency, goals, safety and latency — using transparent
+heuristics whose contributions are always reported, and rolls the per-fixture
+results up into batch reports.
