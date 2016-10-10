@@ -8,3 +8,5 @@ results up into batch reports.
 
 There is intentionally no machine-learning dependency: every score is a small,
 inspectable arithmetic combination so a designer can see *why* an NPC scored
+the way it did.
+"""
