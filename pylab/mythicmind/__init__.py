@@ -15,3 +15,5 @@ __version__ = "1.0.0"
 
 from .model import Persona, Scenario, DialogueTurn, Fixture  # noqa: F401
 from .scoring import evaluate_fixture, EvaluationResult  # noqa: F401
+
+__all__ = [
