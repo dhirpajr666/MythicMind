@@ -17,3 +17,6 @@ from .model import Persona, Scenario, DialogueTurn, Fixture  # noqa: F401
 from .scoring import evaluate_fixture, EvaluationResult  # noqa: F401
 
 __all__ = [
+    "Persona",
+    "Scenario",
+    "DialogueTurn",
