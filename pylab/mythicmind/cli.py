@@ -9,3 +9,11 @@
 `explain` prints every axis reason for a single fixture (full transparency).
 
 Stdlib only — no third-party dependencies.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from pathlib import Path
