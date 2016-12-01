@@ -17,3 +17,11 @@ import argparse
 import json
 import sys
 from pathlib import Path
+
+from .model import Fixture
+from .report import BatchReport
+from .scoring import evaluate_fixture
+
+
+def _collect_fixtures(paths: list[str]) -> list[Path]:
+    out: list[Path] = []
