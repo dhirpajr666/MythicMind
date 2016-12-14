@@ -25,3 +25,11 @@ from .scoring import evaluate_fixture
 
 def _collect_fixtures(paths: list[str]) -> list[Path]:
     out: list[Path] = []
+    for p in paths:
+        path = Path(p)
+        if path.is_dir():
+            out.extend(sorted(path.glob("*.json")))
+        elif path.is_file():
+            out.append(path)
+        else:
+            print(f"warning: skipping missing path {p}", file=sys.stderr)
