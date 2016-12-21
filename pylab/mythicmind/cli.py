@@ -41,3 +41,11 @@ def _cmd_eval(args: argparse.Namespace) -> int:
     result = evaluate_fixture(fx)
     if args.json:
         print(json.dumps(result.as_dict(), indent=2))
+    else:
+        print(f"{fx.fixture_id}: overall {result.overall:.3f}")
+        for a in result.axes:
+            print(f"  {a.name:<12} {a.value:.3f}")
+    return 0
+
+
+def _cmd_explain(args: argparse.Namespace) -> int:
