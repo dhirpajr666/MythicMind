@@ -33,3 +33,11 @@ def _collect_fixtures(paths: list[str]) -> list[Path]:
             out.append(path)
         else:
             print(f"warning: skipping missing path {p}", file=sys.stderr)
+    return out
+
+
+def _cmd_eval(args: argparse.Namespace) -> int:
+    fx = Fixture.load(args.fixture)
+    result = evaluate_fixture(fx)
+    if args.json:
+        print(json.dumps(result.as_dict(), indent=2))
