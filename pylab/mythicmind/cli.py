@@ -58,3 +58,11 @@ def _cmd_explain(args: argparse.Namespace) -> int:
         for reason in a.reasons:
             print(f"  - {reason}")
     return 0
+
+
+def _cmd_batch(args: argparse.Namespace) -> int:
+    files = _collect_fixtures(args.paths)
+    if not files:
+        print("error: no fixtures found", file=sys.stderr)
+        return 1
+    results = [evaluate_fixture(Fixture.load(f)) for f in files]
