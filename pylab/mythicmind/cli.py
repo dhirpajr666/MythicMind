@@ -66,3 +66,11 @@ def _cmd_batch(args: argparse.Namespace) -> int:
         print("error: no fixtures found", file=sys.stderr)
         return 1
     results = [evaluate_fixture(Fixture.load(f)) for f in files]
+    report = BatchReport(results)
+    if args.json:
+        print(json.dumps(report.as_dict(), indent=2))
+    else:
+        print(report.to_text(threshold=args.threshold))
+    return 0
+
+
