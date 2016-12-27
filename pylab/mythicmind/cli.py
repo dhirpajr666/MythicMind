@@ -49,3 +49,12 @@ def _cmd_eval(args: argparse.Namespace) -> int:
 
 
 def _cmd_explain(args: argparse.Namespace) -> int:
+    fx = Fixture.load(args.fixture)
+    result = evaluate_fixture(fx)
+    print(f"fixture: {fx.fixture_id}  (npc={fx.persona.npc_id})")
+    print(f"overall: {result.overall:.3f}")
+    for a in result.axes:
+        print(f"\n[{a.name}]  score = {a.value:.3f}")
+        for reason in a.reasons:
+            print(f"  - {reason}")
+    return 0
