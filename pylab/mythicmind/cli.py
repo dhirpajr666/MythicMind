@@ -74,3 +74,11 @@ def _cmd_batch(args: argparse.Namespace) -> int:
     return 0
 
 
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        prog="mythicmind",
+        description="Explainable AI NPC behaviour evaluation lab (stdlib only).",
+    )
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    p_eval = sub.add_parser("eval", help="score a single fixture")
