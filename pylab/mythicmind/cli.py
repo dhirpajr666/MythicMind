@@ -82,3 +82,11 @@ def build_parser() -> argparse.ArgumentParser:
     sub = parser.add_subparsers(dest="command", required=True)
 
     p_eval = sub.add_parser("eval", help="score a single fixture")
+    p_eval.add_argument("fixture", help="path to a fixture JSON file")
+    p_eval.add_argument("--json", action="store_true", help="emit JSON")
+    p_eval.set_defaults(func=_cmd_eval)
+
+    p_explain = sub.add_parser("explain", help="show all axis reasons for a fixture")
+    p_explain.add_argument("fixture", help="path to a fixture JSON file")
+    p_explain.set_defaults(func=_cmd_explain)
+
