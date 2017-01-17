@@ -38,3 +38,10 @@ class Persona:
 @dataclass(frozen=True)
 class Scenario:
     """The situation the NPC is placed in and the goals it should pursue."""
+
+    scenario_id: str
+    summary: str
+    goals: list[str] = field(default_factory=list)
+    # Latency budget in milliseconds for a single NPC response.
+    latency_budget_ms: float = 800.0
+
