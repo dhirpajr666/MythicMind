@@ -15,3 +15,11 @@ from typing import Any
 @dataclass(frozen=True)
 class Persona:
     """The NPC's stated identity: who it is and what it must never do."""
+
+    npc_id: str
+    name: str
+    traits: list[str] = field(default_factory=list)
+    # Phrases the persona is expected to lean on (voice consistency).
+    voice_markers: list[str] = field(default_factory=list)
+    # Words/phrases that are out of character for this persona.
+    forbidden: list[str] = field(default_factory=list)
