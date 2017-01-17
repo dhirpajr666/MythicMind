@@ -23,3 +23,10 @@ class Persona:
     voice_markers: list[str] = field(default_factory=list)
     # Words/phrases that are out of character for this persona.
     forbidden: list[str] = field(default_factory=list)
+
+    @staticmethod
+    def from_dict(d: dict[str, Any]) -> "Persona":
+        return Persona(
+            npc_id=str(d["npc_id"]),
+            name=str(d.get("name", d["npc_id"])),
+            traits=[str(x) for x in d.get("traits", [])],
