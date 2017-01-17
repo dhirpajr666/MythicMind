@@ -30,3 +30,11 @@ class Persona:
             npc_id=str(d["npc_id"]),
             name=str(d.get("name", d["npc_id"])),
             traits=[str(x) for x in d.get("traits", [])],
+            voice_markers=[str(x).lower() for x in d.get("voice_markers", [])],
+            forbidden=[str(x).lower() for x in d.get("forbidden", [])],
+        )
+
+
+@dataclass(frozen=True)
+class Scenario:
+    """The situation the NPC is placed in and the goals it should pursue."""
