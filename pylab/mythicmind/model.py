@@ -45,3 +45,11 @@ class Scenario:
     # Latency budget in milliseconds for a single NPC response.
     latency_budget_ms: float = 800.0
 
+    @staticmethod
+    def from_dict(d: dict[str, Any]) -> "Scenario":
+        return Scenario(
+            scenario_id=str(d["scenario_id"]),
+            summary=str(d.get("summary", "")),
+            goals=[str(x).lower() for x in d.get("goals", [])],
+            latency_budget_ms=float(d.get("latency_budget_ms", 800.0)),
+        )
