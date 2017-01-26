@@ -53,3 +53,10 @@ class Scenario:
             goals=[str(x).lower() for x in d.get("goals", [])],
             latency_budget_ms=float(d.get("latency_budget_ms", 800.0)),
         )
+
+
+@dataclass(frozen=True)
+class DialogueTurn:
+    """A single NPC utterance plus the measured latency that produced it."""
+
+    speaker: str
