@@ -60,3 +60,11 @@ class DialogueTurn:
     """A single NPC utterance plus the measured latency that produced it."""
 
     speaker: str
+    text: str
+    latency_ms: float = 0.0
+
+    @staticmethod
+    def from_dict(d: dict[str, Any]) -> "DialogueTurn":
+        return DialogueTurn(
+            speaker=str(d.get("speaker", "npc")),
+            text=str(d.get("text", "")),
