@@ -75,3 +75,11 @@ class DialogueTurn:
 @dataclass(frozen=True)
 class Fixture:
     """A complete evaluation unit: persona + scenario + a dialogue trace."""
+
+    fixture_id: str
+    persona: Persona
+    scenario: Scenario
+    dialogue: list[DialogueTurn]
+
+    @staticmethod
+    def from_dict(d: dict[str, Any]) -> "Fixture":
