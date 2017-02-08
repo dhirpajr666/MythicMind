@@ -68,3 +68,10 @@ class DialogueTurn:
         return DialogueTurn(
             speaker=str(d.get("speaker", "npc")),
             text=str(d.get("text", "")),
+            latency_ms=float(d.get("latency_ms", 0.0)),
+        )
+
+
+@dataclass(frozen=True)
+class Fixture:
+    """A complete evaluation unit: persona + scenario + a dialogue trace."""
