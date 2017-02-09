@@ -11,3 +11,8 @@ from statistics import mean
 
 from .scoring import EvaluationResult
 
+_AXES = ("consistency", "goals", "safety", "latency")
+
+
+@dataclass
+class BatchReport:
