@@ -5,3 +5,9 @@ readable summary (dict / JSON) and a compact human-readable text report.
 """
 
 from __future__ import annotations
+
+from dataclasses import dataclass
+from statistics import mean
+
+from .scoring import EvaluationResult
+
