@@ -22,3 +22,8 @@ class BatchReport:
         out: dict[str, float] = {}
         for axis in _AXES:
             vals = [
+                a.value
+                for r in self.results
+                for a in r.axes
+                if a.name == axis
+            ]
