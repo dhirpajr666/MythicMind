@@ -16,3 +16,9 @@ _AXES = ("consistency", "goals", "safety", "latency")
 
 @dataclass
 class BatchReport:
+    results: list[EvaluationResult]
+
+    def axis_means(self) -> dict[str, float]:
+        out: dict[str, float] = {}
+        for axis in _AXES:
+            vals = [
