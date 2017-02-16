@@ -27,3 +27,9 @@ class BatchReport:
                 for a in r.axes
                 if a.name == axis
             ]
+            out[axis] = mean(vals) if vals else 0.0
+        return out
+
+    def overall_mean(self) -> float:
+        return mean([r.overall for r in self.results]) if self.results else 0.0
+
