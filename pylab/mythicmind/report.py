@@ -33,3 +33,9 @@ class BatchReport:
     def overall_mean(self) -> float:
         return mean([r.overall for r in self.results]) if self.results else 0.0
 
+    def flagged(self, threshold: float = 0.6) -> list[EvaluationResult]:
+        """Fixtures whose overall score falls below a review threshold."""
+        return [r for r in self.results if r.overall < threshold]
+
+    def as_dict(self) -> dict:
+        return {
