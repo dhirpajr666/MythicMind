@@ -39,3 +39,8 @@ class BatchReport:
 
     def as_dict(self) -> dict:
         return {
+            "count": len(self.results),
+            "overall_mean": round(self.overall_mean(), 4),
+            "axis_means": {k: round(v, 4) for k, v in self.axis_means().items()},
+            "results": [r.as_dict() for r in self.results],
+        }
