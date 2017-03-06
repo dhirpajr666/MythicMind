@@ -55,3 +55,9 @@ class BatchReport:
         lines.append("")
         lines.append("axis means:")
         for k, v in self.axis_means().items():
+            bar = "#" * int(round(v * 20))
+            lines.append(f"  {k:<12} {v:5.3f}  {bar}")
+        lines.append("")
+        lines.append("per-fixture:")
+        for r in sorted(self.results, key=lambda x: x.overall):
+            mark = "!!" if r.overall < threshold else "ok"
