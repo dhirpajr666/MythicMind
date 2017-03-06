@@ -44,3 +44,9 @@ class BatchReport:
             "axis_means": {k: round(v, 4) for k, v in self.axis_means().items()},
             "results": [r.as_dict() for r in self.results],
         }
+
+    def to_text(self, threshold: float = 0.6) -> str:
+        lines: list[str] = []
+        lines.append("=" * 60)
+        lines.append("  MYTHICMIND - NPC BEHAVIOUR EVALUATION REPORT")
+        lines.append("=" * 60)
