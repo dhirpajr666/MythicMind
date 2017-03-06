@@ -50,3 +50,8 @@ class BatchReport:
         lines.append("=" * 60)
         lines.append("  MYTHICMIND - NPC BEHAVIOUR EVALUATION REPORT")
         lines.append("=" * 60)
+        lines.append(f"fixtures evaluated : {len(self.results)}")
+        lines.append(f"overall mean score : {self.overall_mean():.3f}")
+        lines.append("")
+        lines.append("axis means:")
+        for k, v in self.axis_means().items():
