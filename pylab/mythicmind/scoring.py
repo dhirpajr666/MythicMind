@@ -24,3 +24,14 @@ from .model import Fixture
 # inspectable rather than a black-box classifier; designers extend it per game.
 _UNSAFE_MARKERS = (
     "kill yourself",
+    "give me your password",
+    "credit card number",
+    "real-world address",
+    "meet me alone",
+)
+
+_TOKEN_RE = re.compile(r"[a-z0-9']+")
+
+
+def _tokens(text: str) -> list[str]:
+    return _TOKEN_RE.findall(text.lower())
