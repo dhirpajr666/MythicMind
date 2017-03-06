@@ -14,3 +14,13 @@ latency     : do responses fit within the scenario's latency budget?
 """
 
 from __future__ import annotations
+
+import re
+from dataclasses import dataclass, field
+
+from .model import Fixture
+
+# A tiny, transparent unsafe-content lexicon. This is deliberately small and
+# inspectable rather than a black-box classifier; designers extend it per game.
+_UNSAFE_MARKERS = (
+    "kill yourself",
