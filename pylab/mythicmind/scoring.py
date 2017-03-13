@@ -56,3 +56,13 @@ def score_consistency(fx: Fixture) -> AxisScore:
     if not turns:
         return AxisScore("consistency", 0.0, ["no NPC turns to evaluate"])
 
+    joined = " ".join(t.text.lower() for t in turns)
+    markers = fx.persona.voice_markers
+    hits = [m for m in markers if m in joined]
+    marker_ratio = (len(hits) / len(markers)) if markers else 0.5
+    if markers:
+        reasons.append(f"used {len(hits)}/{len(markers)} voice markers: {hits or 'none'}")
+    else:
+        reasons.append("persona defines no voice markers (neutral 0.50 base)")
+
+    forbidden_hits = [f for f in fx.persona.forbidden if f in joined]
