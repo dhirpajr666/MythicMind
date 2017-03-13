@@ -35,3 +35,13 @@ _TOKEN_RE = re.compile(r"[a-z0-9']+")
 
 def _tokens(text: str) -> list[str]:
     return _TOKEN_RE.findall(text.lower())
+
+
+@dataclass
+class AxisScore:
+    """A single axis result: a 0..1 score plus the reasons behind it."""
+
+    name: str
+    value: float
+    reasons: list[str] = field(default_factory=list)
+
