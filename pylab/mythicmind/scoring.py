@@ -45,3 +45,14 @@ class AxisScore:
     value: float
     reasons: list[str] = field(default_factory=list)
 
+    def as_dict(self) -> dict:
+        return {"name": self.name, "value": round(self.value, 4), "reasons": self.reasons}
+
+
+def score_consistency(fx: Fixture) -> AxisScore:
+    """Reward use of voice markers, penalise forbidden phrasing."""
+    turns = fx.npc_turns()
+    reasons: list[str] = []
+    if not turns:
+        return AxisScore("consistency", 0.0, ["no NPC turns to evaluate"])
+
