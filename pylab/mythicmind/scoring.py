@@ -76,3 +76,14 @@ def score_consistency(fx: Fixture) -> AxisScore:
     return AxisScore("consistency", value, reasons)
 
 
+def score_goals(fx: Fixture) -> AxisScore:
+    """Fraction of scenario goals whose keywords appear in the dialogue."""
+    goals = fx.scenario.goals
+    reasons: list[str] = []
+    if not goals:
+        return AxisScore("goals", 0.5, ["scenario defines no goals (neutral 0.50)"])
+
+    joined = set(_tokens(" ".join(t.text for t in fx.npc_turns())))
+    touched = []
+    for g in goals:
+        keywords = set(_tokens(g))
