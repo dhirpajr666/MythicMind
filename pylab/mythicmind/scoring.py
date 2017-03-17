@@ -66,3 +66,13 @@ def score_consistency(fx: Fixture) -> AxisScore:
         reasons.append("persona defines no voice markers (neutral 0.50 base)")
 
     forbidden_hits = [f for f in fx.persona.forbidden if f in joined]
+    penalty = min(0.5, 0.25 * len(forbidden_hits))
+    if forbidden_hits:
+        reasons.append(f"forbidden phrasing found: {forbidden_hits} (-{penalty:.2f})")
+    else:
+        reasons.append("no forbidden phrasing (no penalty)")
+
+    value = max(0.0, marker_ratio - penalty)
+    return AxisScore("consistency", value, reasons)
+
+
