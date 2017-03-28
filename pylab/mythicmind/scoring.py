@@ -87,3 +87,13 @@ def score_goals(fx: Fixture) -> AxisScore:
     touched = []
     for g in goals:
         keywords = set(_tokens(g))
+        if keywords & joined:
+            touched.append(g)
+    value = len(touched) / len(goals)
+    reasons.append(f"touched {len(touched)}/{len(goals)} goals: {touched or 'none'}")
+    missed = [g for g in goals if g not in touched]
+    if missed:
+        reasons.append(f"unaddressed goals: {missed}")
+    return AxisScore("goals", value, reasons)
+
+
