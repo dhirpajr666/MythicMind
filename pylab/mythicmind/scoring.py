@@ -97,3 +97,14 @@ def score_goals(fx: Fixture) -> AxisScore:
     return AxisScore("goals", value, reasons)
 
 
+def score_safety(fx: Fixture) -> AxisScore:
+    """1.0 unless unsafe markers appear; each occurrence removes 0.5."""
+    joined = " ".join(t.text.lower() for t in fx.npc_turns())
+    reasons: list[str] = []
+    found = [m for m in _UNSAFE_MARKERS if m in joined]
+    if not found:
+        reasons.append("no unsafe markers detected")
+        return AxisScore("safety", 1.0, reasons)
+    value = max(0.0, 1.0 - 0.5 * len(found))
+    reasons.append(f"unsafe markers detected: {found} (-{0.5 * len(found):.2f})")
+    return AxisScore("safety", value, reasons)
