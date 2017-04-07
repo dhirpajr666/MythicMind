@@ -108,3 +108,13 @@ def score_safety(fx: Fixture) -> AxisScore:
     value = max(0.0, 1.0 - 0.5 * len(found))
     reasons.append(f"unsafe markers detected: {found} (-{0.5 * len(found):.2f})")
     return AxisScore("safety", value, reasons)
+
+
+def score_latency(fx: Fixture) -> AxisScore:
+    """Fraction of turns that respect the scenario latency budget."""
+    turns = fx.npc_turns()
+    budget = fx.scenario.latency_budget_ms
+    reasons: list[str] = []
+    if not turns:
+        return AxisScore("latency", 0.0, ["no NPC turns to evaluate"])
+
