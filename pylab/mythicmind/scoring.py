@@ -118,3 +118,13 @@ def score_latency(fx: Fixture) -> AxisScore:
     if not turns:
         return AxisScore("latency", 0.0, ["no NPC turns to evaluate"])
 
+    within = [t for t in turns if t.latency_ms <= budget]
+    value = len(within) / len(turns)
+    worst = max(turns, key=lambda t: t.latency_ms)
+    reasons.append(f"{len(within)}/{len(turns)} turns within {budget:.0f}ms budget")
+    reasons.append(f"slowest turn: {worst.latency_ms:.0f}ms")
+    return AxisScore("latency", value, reasons)
+
+
+@dataclass
+class EvaluationResult:
