@@ -128,3 +128,14 @@ def score_latency(fx: Fixture) -> AxisScore:
 
 @dataclass
 class EvaluationResult:
+    """The complete evaluation of one fixture."""
+
+    fixture_id: str
+    npc_id: str
+    axes: list[AxisScore]
+    overall: float
+
+    def as_dict(self) -> dict:
+        return {
+            "fixture_id": self.fixture_id,
+            "npc_id": self.npc_id,
