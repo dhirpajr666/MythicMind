@@ -7,3 +7,7 @@ name = "mythicmind"
 version = "1.0.0"
 description = "Explainable, stdlib-only AI NPC behaviour evaluation lab (Python side of MythicMind)."
 readme = "../README.md"
+requires-python = ">=3.10"
+license = { file = "../LICENSE" }
+authors = [{ name = "MythicMind contributors" }]
+keywords = ["npc", "ai", "evaluation", "game-ai", "dialogue", "heuristics"]
