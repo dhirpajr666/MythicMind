@@ -4,3 +4,6 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mythicmind"
+version = "1.0.0"
+description = "Explainable, stdlib-only AI NPC behaviour evaluation lab (Python side of MythicMind)."
+readme = "../README.md"
