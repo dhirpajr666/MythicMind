@@ -11,3 +11,6 @@ requires-python = ">=3.10"
 license = { file = "../LICENSE" }
 authors = [{ name = "MythicMind contributors" }]
 keywords = ["npc", "ai", "evaluation", "game-ai", "dialogue", "heuristics"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
