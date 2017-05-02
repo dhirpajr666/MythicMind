@@ -23,3 +23,7 @@ classifiers = [
 ]
 # Deliberately zero runtime dependencies: the lab is stdlib-only by design.
 dependencies = []
+
+[project.scripts]
+mythicmind = "mythicmind.cli:main"
+
