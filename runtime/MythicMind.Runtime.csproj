@@ -6,3 +6,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>MythicMind.Runtime</RootNamespace>
+    <AssemblyName>mythicmind</AssemblyName>
