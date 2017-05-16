@@ -7,3 +7,5 @@
     <Nullable>enable</Nullable>
     <RootNamespace>MythicMind.Runtime</RootNamespace>
     <AssemblyName>mythicmind</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <InvariantGlobalization>true</InvariantGlobalization>
