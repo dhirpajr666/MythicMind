@@ -8,3 +8,7 @@ namespace MythicMind.Runtime;
 /// algorithm is not guaranteed stable across runtimes, which would break
 /// deterministic encounter replay. This is a SplitMix64 generator: tiny,
 /// well-distributed, and byte-for-byte reproducible on every platform.
+/// </summary>
+public sealed class DeterministicRng
+{
+    private ulong _state;
