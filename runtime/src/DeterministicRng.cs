@@ -12,3 +12,8 @@ namespace MythicMind.Runtime;
 public sealed class DeterministicRng
 {
     private ulong _state;
+
+    public DeterministicRng(ulong seed)
+    {
+        _state = seed;
+    }
