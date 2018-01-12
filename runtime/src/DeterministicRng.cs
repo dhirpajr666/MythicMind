@@ -30,3 +30,8 @@ public sealed class DeterministicRng
         return new DeterministicRng(h);
     }
 
+    public ulong NextUInt64()
+    {
+        _state += 0x9E3779B97F4A7C15UL;
+        ulong z = _state;
+        z = (z ^ (z >> 30)) * 0xBF58476D1CE4E5B9UL;
