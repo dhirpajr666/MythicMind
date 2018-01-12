@@ -17,3 +17,7 @@ public sealed class DeterministicRng
     {
         _state = seed;
     }
+
+    /// <summary>Derive a child generator from a string label (stable hashing).</summary>
+    public static DeterministicRng FromLabel(ulong baseSeed, string label)
+    {
