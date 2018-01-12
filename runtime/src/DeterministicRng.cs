@@ -21,3 +21,8 @@ public sealed class DeterministicRng
     /// <summary>Derive a child generator from a string label (stable hashing).</summary>
     public static DeterministicRng FromLabel(ulong baseSeed, string label)
     {
+        ulong h = baseSeed ^ 0x9E3779B97F4A7C15UL;
+        foreach (char c in label)
+        {
+            h ^= c;
+            h *= 0x100000001B3UL;
