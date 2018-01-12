@@ -26,3 +26,7 @@ public sealed class DeterministicRng
         {
             h ^= c;
             h *= 0x100000001B3UL;
+        }
+        return new DeterministicRng(h);
+    }
+
