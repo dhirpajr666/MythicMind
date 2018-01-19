@@ -39,3 +39,8 @@ public sealed class DeterministicRng
         return z ^ (z >> 31);
     }
 
+    /// <summary>Uniform integer in [0, maxExclusive).</summary>
+    public int NextInt(int maxExclusive)
+    {
+        if (maxExclusive <= 0) throw new ArgumentOutOfRangeException(nameof(maxExclusive));
+        return (int)(NextUInt64() % (ulong)maxExclusive);
