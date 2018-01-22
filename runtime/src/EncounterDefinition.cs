@@ -11,3 +11,9 @@ namespace MythicMind.Runtime;
 /// the roster of NPCs with their goals, and the number of ticks to run.
 /// Loaded from JSON so encounters are data, not code, and fully replayable.
 /// </summary>
+public sealed class EncounterDefinition
+{
+    [JsonPropertyName("name")] public string Name { get; set; } = "unnamed";
+    [JsonPropertyName("seed")] public ulong Seed { get; set; } = 1;
+    [JsonPropertyName("ticks")] public int Ticks { get; set; } = 8;
+    [JsonPropertyName("flags")] public Dictionary<string, string> Flags { get; set; } = new();
