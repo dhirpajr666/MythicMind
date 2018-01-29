@@ -17,3 +17,9 @@ public sealed class EncounterDefinition
     [JsonPropertyName("seed")] public ulong Seed { get; set; } = 1;
     [JsonPropertyName("ticks")] public int Ticks { get; set; } = 8;
     [JsonPropertyName("flags")] public Dictionary<string, string> Flags { get; set; } = new();
+    [JsonPropertyName("resources")] public Dictionary<string, double> Resources { get; set; } = new();
+    [JsonPropertyName("npcs")] public List<NpcDefinition> Npcs { get; set; } = new();
+
+    private static readonly JsonSerializerOptions ReadOptions = new()
+    {
+        PropertyNameCaseInsensitive = true,
