@@ -35,3 +35,9 @@ public sealed class EncounterDefinition
         if (def.Npcs.Count == 0)
             throw new InvalidDataException($"Encounter '{def.Name}' has no NPCs.");
         return def;
+    }
+
+    public WorldState ToWorld()
+    {
+        var world = new WorldState();
+        foreach (var kv in Flags) world.SetFlag(kv.Key, kv.Value);
