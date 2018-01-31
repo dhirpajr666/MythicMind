@@ -47,3 +47,9 @@ public sealed class EncounterDefinition
             var npc = new Npc { Id = nd.Id, Persona = nd.Persona, Mood = nd.Mood };
             foreach (var gd in nd.Goals)
             {
+                npc.Goals.Add(new Goal
+                {
+                    Name = gd.Name,
+                    Priority = gd.Priority,
+                    Line = gd.Line,
+                    Requires = gd.Requires,
