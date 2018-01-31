@@ -29,3 +29,9 @@ public sealed class EncounterDefinition
 
     public static EncounterDefinition Load(string path)
     {
+        string json = File.ReadAllText(path);
+        var def = JsonSerializer.Deserialize<EncounterDefinition>(json, ReadOptions)
+                  ?? throw new InvalidDataException($"Could not parse encounter: {path}");
+        if (def.Npcs.Count == 0)
+            throw new InvalidDataException($"Encounter '{def.Name}' has no NPCs.");
+        return def;
