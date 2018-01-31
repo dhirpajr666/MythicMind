@@ -41,3 +41,9 @@ public sealed class EncounterDefinition
     {
         var world = new WorldState();
         foreach (var kv in Flags) world.SetFlag(kv.Key, kv.Value);
+        foreach (var kv in Resources) world.Resources[kv.Key] = kv.Value;
+        foreach (var nd in Npcs)
+        {
+            var npc = new Npc { Id = nd.Id, Persona = nd.Persona, Mood = nd.Mood };
+            foreach (var gd in nd.Goals)
+            {
