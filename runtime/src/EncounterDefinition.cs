@@ -23,3 +23,9 @@ public sealed class EncounterDefinition
     private static readonly JsonSerializerOptions ReadOptions = new()
     {
         PropertyNameCaseInsensitive = true,
+        ReadCommentHandling = JsonCommentHandling.Skip,
+        AllowTrailingCommas = true,
+    };
+
+    public static EncounterDefinition Load(string path)
+    {
