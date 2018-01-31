@@ -53,3 +53,9 @@ public sealed class EncounterDefinition
                     Priority = gd.Priority,
                     Line = gd.Line,
                     Requires = gd.Requires,
+                    SetsFlags = gd.SetsFlags,
+                });
+            }
+            world.Npcs[npc.Id] = npc;
+        }
+        return world;
