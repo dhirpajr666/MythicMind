@@ -59,3 +59,9 @@ public sealed class EncounterDefinition
             world.Npcs[npc.Id] = npc;
         }
         return world;
+    }
+}
+
+public sealed class NpcDefinition
+{
+    [JsonPropertyName("id")] public string Id { get; set; } = "npc";
