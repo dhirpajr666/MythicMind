@@ -11,3 +11,9 @@ namespace MythicMind.Runtime;
 /// </summary>
 public sealed class Goal
 {
+    public required string Name { get; init; }
+    public double Priority { get; init; } = 1.0;
+
+    /// <summary>Flag conditions of the form key => expectedValue.</summary>
+    public Dictionary<string, string> Requires { get; init; } = new(StringComparer.Ordinal);
+
