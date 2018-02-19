@@ -17,3 +17,8 @@ public sealed class Goal
     /// <summary>Flag conditions of the form key => expectedValue.</summary>
     public Dictionary<string, string> Requires { get; init; } = new(StringComparer.Ordinal);
 
+    /// <summary>Utterance template the NPC speaks when this goal is active.</summary>
+    public string Line { get; init; } = "...";
+
+    /// <summary>World effects applied when this goal drives a tick.</summary>
+    public Dictionary<string, string> SetsFlags { get; init; } = new(StringComparer.Ordinal);
