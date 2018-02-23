@@ -28,3 +28,9 @@ public sealed class Goal
 }
 
 /// <summary>A bounded, decaying memory entry an NPC holds about the world.</summary>
+public sealed record MemoryTrace(int Tick, string Kind, string Detail, double Salience);
+
+/// <summary>
+/// A non-player character with a persona, a prioritised goal stack and a
+/// bounded working memory. Memory is a ring buffer capped at
+/// <see cref="MemoryCapacity"/> so long encounters stay deterministic and
