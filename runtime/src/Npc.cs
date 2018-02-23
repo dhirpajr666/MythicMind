@@ -22,3 +22,9 @@ public sealed class Goal
 
     /// <summary>World effects applied when this goal drives a tick.</summary>
     public Dictionary<string, string> SetsFlags { get; init; } = new(StringComparer.Ordinal);
+
+    public bool IsSatisfiable(WorldState world) =>
+        Requires.All(r => string.Equals(world.GetFlag(r.Key), r.Value, StringComparison.Ordinal));
+}
+
+/// <summary>A bounded, decaying memory entry an NPC holds about the world.</summary>
