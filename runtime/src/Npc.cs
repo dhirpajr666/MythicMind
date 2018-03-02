@@ -45,3 +45,9 @@ public sealed class Npc
     public double Mood { get; set; } = 0.0; // -1 hostile .. +1 warm
     public List<Goal> Goals { get; init; } = new();
 
+    private readonly List<MemoryTrace> _memory = new();
+    public IReadOnlyList<MemoryTrace> Memory => _memory;
+
+    public void Remember(MemoryTrace trace)
+    {
+        _memory.Add(trace);
