@@ -57,3 +57,9 @@ public sealed class Npc
 
     /// <summary>
     /// Choose the active goal for this tick. Ties are broken deterministically
+    /// by goal name so replay is stable regardless of insertion order.
+    /// </summary>
+    public Goal? SelectGoal(WorldState world)
+    {
+        return Goals
+            .Where(g => g.IsSatisfiable(world))
