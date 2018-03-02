@@ -34,3 +34,9 @@ public sealed record MemoryTrace(int Tick, string Kind, string Detail, double Sa
 /// A non-player character with a persona, a prioritised goal stack and a
 /// bounded working memory. Memory is a ring buffer capped at
 /// <see cref="MemoryCapacity"/> so long encounters stay deterministic and
+/// bounded in size.
+/// </summary>
+public sealed class Npc
+{
+    public const int MemoryCapacity = 16;
+
