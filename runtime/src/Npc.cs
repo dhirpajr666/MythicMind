@@ -51,3 +51,9 @@ public sealed class Npc
     public void Remember(MemoryTrace trace)
     {
         _memory.Add(trace);
+        if (_memory.Count > MemoryCapacity)
+            _memory.RemoveAt(0);
+    }
+
+    /// <summary>
+    /// Choose the active goal for this tick. Ties are broken deterministically
