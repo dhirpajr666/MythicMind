@@ -40,3 +40,8 @@ public sealed class Npc
 {
     public const int MemoryCapacity = 16;
 
+    public required string Id { get; init; }
+    public required string Persona { get; init; }
+    public double Mood { get; set; } = 0.0; // -1 hostile .. +1 warm
+    public List<Goal> Goals { get; init; } = new();
+
