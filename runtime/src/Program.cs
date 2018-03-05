@@ -11,3 +11,13 @@ using MythicMind.Runtime;
 //   mythicmind replay-check <encounter.json>
 //
 // The "run" verb simulates an encounter and emits a JSON transcript to stdout
+// or a file. "replay-check" runs the same encounter twice and confirms the two
+// transcripts are byte-identical, proving determinism.
+// -----------------------------------------------------------------------------
+
+var jsonOptions = new JsonSerializerOptions
+{
+    WriteIndented = false,
+    DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.Never,
+};
+
