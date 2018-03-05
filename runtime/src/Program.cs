@@ -21,3 +21,12 @@ var jsonOptions = new JsonSerializerOptions
     DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.Never,
 };
 
+try
+{
+    if (args.Length == 0)
+    {
+        PrintUsage();
+        return 2;
+    }
+
+    switch (args[0])
