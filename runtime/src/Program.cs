@@ -30,3 +30,13 @@ try
     }
 
     switch (args[0])
+    {
+        case "run":
+            return CmdRun(args);
+        case "replay-check":
+            return CmdReplayCheck(args);
+        case "-h":
+        case "--help":
+        case "help":
+            PrintUsage();
+            return 0;
