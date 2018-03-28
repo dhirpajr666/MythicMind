@@ -59,3 +59,12 @@ catch (Exception ex)
 
 int CmdRun(string[] args)
 {
+    if (args.Length < 2)
+    {
+        Console.Error.WriteLine("error: 'run' requires an encounter file");
+        return 2;
+    }
+
+    string encounterPath = args[1];
+    string? outPath = null;
+    bool pretty = false;
