@@ -40,3 +40,12 @@ try
         case "help":
             PrintUsage();
             return 0;
+        default:
+            Console.Error.WriteLine($"error: unknown command '{args[0]}'");
+            PrintUsage();
+            return 2;
+    }
+}
+catch (FileNotFoundException ex)
+{
+    Console.Error.WriteLine($"error: file not found: {ex.FileName ?? ex.Message}");
