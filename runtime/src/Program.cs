@@ -49,3 +49,13 @@ try
 catch (FileNotFoundException ex)
 {
     Console.Error.WriteLine($"error: file not found: {ex.FileName ?? ex.Message}");
+    return 1;
+}
+catch (Exception ex)
+{
+    Console.Error.WriteLine($"error: {ex.Message}");
+    return 1;
+}
+
+int CmdRun(string[] args)
+{
