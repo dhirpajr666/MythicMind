@@ -68,3 +68,13 @@ int CmdRun(string[] args)
     string encounterPath = args[1];
     string? outPath = null;
     bool pretty = false;
+
+    for (int i = 2; i < args.Length; i++)
+    {
+        switch (args[i])
+        {
+            case "--out":
+                if (i + 1 >= args.Length) { Console.Error.WriteLine("error: --out needs a path"); return 2; }
+                outPath = args[++i];
+                break;
+            case "--pretty":
