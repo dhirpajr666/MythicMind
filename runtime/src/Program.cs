@@ -97,3 +97,12 @@ int CmdRun(string[] args)
         File.WriteAllText(outPath, json);
         Console.Error.WriteLine($"wrote transcript -> {outPath} ({transcript.Dialogue.Count} lines)");
     }
+    else
+    {
+        Console.WriteLine(json);
+    }
+    return 0;
+}
+
+int CmdReplayCheck(string[] args)
+{
