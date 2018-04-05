@@ -87,3 +87,13 @@ int CmdRun(string[] args)
     }
 
     var def = EncounterDefinition.Load(encounterPath);
+    var transcript = Simulator.Run(def);
+
+    var opts = new JsonSerializerOptions { WriteIndented = pretty };
+    string json = JsonSerializer.Serialize(transcript, opts);
+
+    if (outPath is not null)
+    {
+        File.WriteAllText(outPath, json);
+        Console.Error.WriteLine($"wrote transcript -> {outPath} ({transcript.Dialogue.Count} lines)");
+    }
