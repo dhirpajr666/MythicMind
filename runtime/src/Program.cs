@@ -78,3 +78,12 @@ int CmdRun(string[] args)
                 outPath = args[++i];
                 break;
             case "--pretty":
+                pretty = true;
+                break;
+            default:
+                Console.Error.WriteLine($"error: unknown flag '{args[i]}'");
+                return 2;
+        }
+    }
+
+    var def = EncounterDefinition.Load(encounterPath);
