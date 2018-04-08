@@ -106,3 +106,13 @@ int CmdRun(string[] args)
 
 int CmdReplayCheck(string[] args)
 {
+    if (args.Length < 2)
+    {
+        Console.Error.WriteLine("error: 'replay-check' requires an encounter file");
+        return 2;
+    }
+
+    var def = EncounterDefinition.Load(args[1]);
+    var opts = new JsonSerializerOptions { WriteIndented = false };
+
+    string a = JsonSerializer.Serialize(Simulator.Run(def), opts);
