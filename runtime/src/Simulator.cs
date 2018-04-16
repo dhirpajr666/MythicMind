@@ -10,3 +10,8 @@ public sealed record TranscriptLine(
     string NpcId,
     string Goal,
     string Utterance,
+    double Mood);
+
+/// <summary>The full, replayable record of a simulated encounter.</summary>
+public sealed record EncounterTranscript(
+    string Encounter,
