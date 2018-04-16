@@ -15,3 +15,8 @@ public sealed record TranscriptLine(
 /// <summary>The full, replayable record of a simulated encounter.</summary>
 public sealed record EncounterTranscript(
     string Encounter,
+    ulong Seed,
+    int Ticks,
+    List<TranscriptLine> Dialogue,
+    WorldSnapshot FinalWorld);
+
