@@ -26,3 +26,8 @@ public sealed record EncounterTranscript(
 /// highest-priority satisfiable goal, and records every utterance. Running the
 /// same definition twice yields byte-identical transcripts.
 /// </summary>
+public static class Simulator
+{
+    public static EncounterTranscript Run(EncounterDefinition def)
+    {
+        var world = def.ToWorld();
