@@ -20,3 +20,9 @@ public sealed record EncounterTranscript(
     List<TranscriptLine> Dialogue,
     WorldSnapshot FinalWorld);
 
+/// <summary>
+/// The deterministic encounter simulator. Given an <see cref="EncounterDefinition"/>
+/// it advances the world tick by tick, letting each NPC select and act on its
+/// highest-priority satisfiable goal, and records every utterance. Running the
+/// same definition twice yields byte-identical transcripts.
+/// </summary>
