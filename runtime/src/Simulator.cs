@@ -31,3 +31,8 @@ public static class Simulator
     public static EncounterTranscript Run(EncounterDefinition def)
     {
         var world = def.ToWorld();
+        var rng = new DeterministicRng(def.Seed);
+        var dialogue = new List<TranscriptLine>();
+
+        for (int t = 0; t < def.Ticks; t++)
+        {
