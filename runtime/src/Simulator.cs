@@ -42,3 +42,8 @@ public static class Simulator
             foreach (var npc in world.Npcs.Values.OrderBy(n => n.Id, StringComparer.Ordinal))
             {
                 var goal = npc.SelectGoal(world);
+                if (goal is null)
+                {
+                    dialogue.Add(new TranscriptLine(t, npc.Id, "(none)", "*waits*", Math.Round(npc.Mood, 4)));
+                    continue;
+                }
