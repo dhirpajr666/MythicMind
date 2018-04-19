@@ -36,3 +36,9 @@ public static class Simulator
 
         for (int t = 0; t < def.Ticks; t++)
         {
+            world.Tick = t;
+
+            // NPCs act in a stable id order so replay is deterministic.
+            foreach (var npc in world.Npcs.Values.OrderBy(n => n.Id, StringComparer.Ordinal))
+            {
+                var goal = npc.SelectGoal(world);
