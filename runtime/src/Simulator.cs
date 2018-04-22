@@ -52,3 +52,9 @@ public static class Simulator
                 foreach (var kv in goal.SetsFlags)
                     world.SetFlag(kv.Key, kv.Value);
 
+                // Mood drifts slightly toward warmth when a goal succeeds; a
+                // small deterministic jitter keeps personalities from feeling
+                // robotic without breaking reproducibility.
+                var npcRng = DeterministicRng.FromLabel(def.Seed, $"{npc.Id}:{t}");
+                double jitter = (npcRng.NextDouble() - 0.5) * 0.05;
+                npc.Mood = Math.Clamp(npc.Mood + 0.03 + jitter, -1.0, 1.0);
