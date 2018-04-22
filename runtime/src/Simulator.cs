@@ -47,3 +47,8 @@ public static class Simulator
                     dialogue.Add(new TranscriptLine(t, npc.Id, "(none)", "*waits*", Math.Round(npc.Mood, 4)));
                     continue;
                 }
+
+                // Apply goal effects to the shared world.
+                foreach (var kv in goal.SetsFlags)
+                    world.SetFlag(kv.Key, kv.Value);
+
