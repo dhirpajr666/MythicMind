@@ -12,3 +12,8 @@ namespace MythicMind.Runtime;
 public sealed class WorldState
 {
     /// <summary>Named world facts, e.g. "gate.open" -> "false".</summary>
+    public Dictionary<string, string> Flags { get; } = new(StringComparer.Ordinal);
+
+    /// <summary>Named numeric resources, e.g. "party.gold" -> 40.</summary>
+    public Dictionary<string, double> Resources { get; } = new(StringComparer.Ordinal);
+
