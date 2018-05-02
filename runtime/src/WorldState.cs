@@ -21,3 +21,8 @@ public sealed class WorldState
     public Dictionary<string, Npc> Npcs { get; } = new(StringComparer.Ordinal);
 
     /// <summary>Current simulation tick (0-based).</summary>
+    public int Tick { get; set; }
+
+    public string GetFlag(string key, string fallback = "") =>
+        Flags.TryGetValue(key, out var v) ? v : fallback;
+
