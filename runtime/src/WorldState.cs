@@ -17,3 +17,7 @@ public sealed class WorldState
     /// <summary>Named numeric resources, e.g. "party.gold" -> 40.</summary>
     public Dictionary<string, double> Resources { get; } = new(StringComparer.Ordinal);
 
+    /// <summary>All NPCs currently present in the encounter, keyed by id.</summary>
+    public Dictionary<string, Npc> Npcs { get; } = new(StringComparer.Ordinal);
+
+    /// <summary>Current simulation tick (0-based).</summary>
