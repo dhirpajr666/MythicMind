@@ -26,3 +26,7 @@ public sealed class WorldState
     public string GetFlag(string key, string fallback = "") =>
         Flags.TryGetValue(key, out var v) ? v : fallback;
 
+    public bool GetBoolFlag(string key) =>
+        Flags.TryGetValue(key, out var v) && string.Equals(v, "true", StringComparison.OrdinalIgnoreCase);
+
+    public double GetResource(string key, double fallback = 0) =>
