@@ -30,3 +30,8 @@ public sealed class WorldState
         Flags.TryGetValue(key, out var v) && string.Equals(v, "true", StringComparison.OrdinalIgnoreCase);
 
     public double GetResource(string key, double fallback = 0) =>
+        Resources.TryGetValue(key, out var v) ? v : fallback;
+
+    public void SetFlag(string key, string value) => Flags[key] = value;
+
+    public void AddResource(string key, double delta) =>
