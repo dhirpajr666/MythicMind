@@ -35,3 +35,7 @@ public sealed class WorldState
     public void SetFlag(string key, string value) => Flags[key] = value;
 
     public void AddResource(string key, double delta) =>
+        Resources[key] = GetResource(key) + delta;
+
+    /// <summary>A stable, ordered view suitable for serialisation.</summary>
+    public WorldSnapshot Snapshot() => new(
