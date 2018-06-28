@@ -39,3 +39,8 @@ public sealed class WorldState
 
     /// <summary>A stable, ordered view suitable for serialisation.</summary>
     public WorldSnapshot Snapshot() => new(
+        Tick,
+        Flags.OrderBy(kv => kv.Key, StringComparer.Ordinal)
+             .ToDictionary(kv => kv.Key, kv => kv.Value, StringComparer.Ordinal),
+        Resources.OrderBy(kv => kv.Key, StringComparer.Ordinal)
+                 .ToDictionary(kv => kv.Key, kv => kv.Value, StringComparer.Ordinal),
