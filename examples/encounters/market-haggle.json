@@ -1,3 +1,8 @@
 {
   "name": "market-haggle",
   "seed": 7,
+  "ticks": 5,
+  "flags": {
+    "deal.closed": "false"
+  },
+  "resources": {
