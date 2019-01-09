@@ -6,3 +6,7 @@
     "deal.closed": "false"
   },
   "resources": {
+    "sella.gold": 40
+  },
+  "npcs": [
+    {
