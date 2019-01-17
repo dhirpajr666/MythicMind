@@ -10,3 +10,8 @@
   },
   "npcs": [
     {
+      "id": "sella",
+      "persona": "Shrewd but cheerful potion merchant.",
+      "mood": 0.4,
+      "goals": [
+        {
