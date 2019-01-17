@@ -15,3 +15,7 @@
       "mood": 0.4,
       "goals": [
         {
+          "name": "pitch-wares",
+          "priority": 2.0,
+          "line": "Fine wares, best price in the realm — for you, a bargain!",
+          "requires": { "deal.closed": "false" },
