@@ -19,3 +19,8 @@
           "priority": 2.0,
           "line": "Fine wares, best price in the realm — for you, a bargain!",
           "requires": { "deal.closed": "false" },
+          "sets_flags": { "deal.pitched": "true" }
+        },
+        {
+          "name": "thank-buyer",
+          "priority": 3.0,
