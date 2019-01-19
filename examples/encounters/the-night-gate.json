@@ -8,3 +8,9 @@
   },
   "resources": {
     "keep.morale": 3
+  },
+  "npcs": [
+    {
+      "id": "brannoc",
+      "persona": "Dutiful gatekeeper bound by the old oath.",
+      "mood": 0.1,
