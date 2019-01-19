@@ -31,3 +31,9 @@
         }
       ]
     },
+    {
+      "id": "herald",
+      "persona": "A restless herald carrying urgent news.",
+      "mood": -0.2,
+      "goals": [
+        {
