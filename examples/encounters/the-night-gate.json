@@ -14,3 +14,9 @@
       "id": "brannoc",
       "persona": "Dutiful gatekeeper bound by the old oath.",
       "mood": 0.1,
+      "goals": [
+        {
+          "name": "hold-the-gate",
+          "priority": 3.0,
+          "line": "By the old oath, the gate stays shut past dusk.",
+          "requires": { "time.dusk": "true", "gate.open": "false" },
