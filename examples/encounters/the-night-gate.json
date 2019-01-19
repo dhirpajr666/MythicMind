@@ -25,3 +25,9 @@
         {
           "name": "welcome-at-dawn",
           "priority": 1.0,
+          "line": "Dawn breaks — enter, traveller, and be warmed.",
+          "requires": { "time.dusk": "false" },
+          "sets_flags": { "gate.open": "true" }
+        }
+      ]
+    },
