@@ -2,3 +2,9 @@
   "name": "the-night-gate",
   "seed": 1337,
   "ticks": 6,
+  "flags": {
+    "gate.open": "false",
+    "time.dusk": "true"
+  },
+  "resources": {
+    "keep.morale": 3
