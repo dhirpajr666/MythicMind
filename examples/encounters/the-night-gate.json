@@ -20,3 +20,8 @@
           "priority": 3.0,
           "line": "By the old oath, the gate stays shut past dusk.",
           "requires": { "time.dusk": "true", "gate.open": "false" },
+          "sets_flags": { "gate.challenged": "true" }
+        },
+        {
+          "name": "welcome-at-dawn",
+          "priority": 1.0,
