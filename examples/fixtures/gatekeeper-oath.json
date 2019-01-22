@@ -1,2 +1,5 @@
 {
   "fixture_id": "gatekeeper-oath",
+  "persona": {
+    "npc_id": "brannoc",
+    "name": "Brannoc the Gatekeeper",
