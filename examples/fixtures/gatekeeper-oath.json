@@ -6,3 +6,6 @@
     "traits": ["dutiful", "gruff", "loyal to the keep"],
     "voice_markers": ["by the old oath", "the gate stays shut", "traveller"],
     "forbidden": ["lol", "whatever", "as an ai"]
+  },
+  "scenario": {
+    "scenario_id": "night-arrival",
