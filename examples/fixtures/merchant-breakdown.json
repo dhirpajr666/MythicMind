@@ -1,2 +1,5 @@
 {
   "fixture_id": "merchant-breakdown",
+  "persona": {
+    "npc_id": "sella",
+    "name": "Sella the Merchant",
