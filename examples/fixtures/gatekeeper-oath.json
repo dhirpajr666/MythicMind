@@ -12,3 +12,6 @@
     "summary": "A hooded traveller demands entry to the keep after dark.",
     "goals": ["challenge the traveller", "protect the gate", "offer shelter at dawn"],
     "latency_budget_ms": 800
+  },
+  "dialogue": [
+    { "speaker": "traveller", "text": "Open up! I must get inside.", "latency_ms": 0 },
