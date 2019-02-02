@@ -12,3 +12,6 @@
     "summary": "A customer haggles over the price of a healing potion.",
     "goals": ["greet the customer", "quote a price", "close the sale"],
     "latency_budget_ms": 500
+  },
+  "dialogue": [
+    { "speaker": "customer", "text": "How much for the red potion?", "latency_ms": 0 },
