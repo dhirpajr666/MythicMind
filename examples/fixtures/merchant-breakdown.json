@@ -9,3 +9,6 @@
   },
   "scenario": {
     "scenario_id": "market-haggle",
+    "summary": "A customer haggles over the price of a healing potion.",
+    "goals": ["greet the customer", "quote a price", "close the sale"],
+    "latency_budget_ms": 500
