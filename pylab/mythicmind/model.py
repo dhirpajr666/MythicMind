@@ -83,3 +83,17 @@ class Fixture:
 
     @staticmethod
     def from_dict(d: dict[str, Any]) -> "Fixture":
+        return Fixture(
+            fixture_id=str(d["fixture_id"]),
+            persona=Persona.from_dict(d["persona"]),
+            scenario=Scenario.from_dict(d["scenario"]),
+            dialogue=[DialogueTurn.from_dict(t) for t in d.get("dialogue", [])],
+        )
+
+    @staticmethod
+    def load(path: str | Path) -> "Fixture":
+        raw = json.loads(Path(path).read_text(encoding="utf-8"))
+        return Fixture.from_dict(raw)
+
+    def npc_turns(self) -> list[DialogueTurn]:
+        """Only the NPC's own utterances (the thing under evaluation)."""
