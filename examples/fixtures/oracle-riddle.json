@@ -1,2 +1,5 @@
 {
   "fixture_id": "oracle-riddle",
+  "persona": {
+    "npc_id": "vesh",
+    "name": "Vesh the Star-Oracle",
