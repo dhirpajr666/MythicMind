@@ -9,3 +9,6 @@
   },
   "scenario": {
     "scenario_id": "prophecy-request",
+    "summary": "A seeker asks the oracle to reveal the path to the sunken vault.",
+    "goals": ["acknowledge the seeker", "reveal a clue", "warn of danger"],
+    "latency_budget_ms": 900
