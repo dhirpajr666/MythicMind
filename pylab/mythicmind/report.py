@@ -61,3 +61,14 @@ class BatchReport:
         lines.append("per-fixture:")
         for r in sorted(self.results, key=lambda x: x.overall):
             mark = "!!" if r.overall < threshold else "ok"
+            lines.append(f"  [{mark}] {r.fixture_id:<24} {r.overall:5.3f}  ({r.npc_id})")
+        flagged = self.flagged(threshold)
+        if flagged:
+            lines.append("")
+            lines.append(f"flagged for review (< {threshold:.2f}):")
+            for r in flagged:
+                lines.append(f"  - {r.fixture_id}")
+                for a in r.axes:
+                    if a.value < threshold:
+                        lines.append(f"      {a.name}: {a.value:.3f} - {a.reasons[0] if a.reasons else ''}")
+        lines.append("=" * 60)
