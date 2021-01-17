@@ -23,3 +23,11 @@ directory. This document describes how each is built and where the seams are.
 The two lenses do not import each other. They meet only through JSON on disk.
 This keeps each side simple and independently testable, and lets a team adopt
 just one lens if that is all they need.
+
+## The Python lens (`pylab/mythicmind/`)
+
+| Module        | Responsibility                                                        |
+|---------------|-----------------------------------------------------------------------|
+| `model.py`    | Frozen dataclasses for `Persona`, `Scenario`, `DialogueTurn`, `Fixture`; JSON loading and validation. |
+| `scoring.py`  | The four axis heuristics. Each returns an `AxisScore` carrying value **and** reasons. `evaluate_fixture` combines them with explicit weights. |
+| `report.py`   | `BatchReport`: axis means, threshold flagging, and text/JSON rendering. |
