@@ -39,3 +39,10 @@ so the lens runs anywhere Python ≥ 3.10 does, with nothing to install.
 
 ### Data flow
 
+```
+fixture.json → Fixture.load → evaluate_fixture
+                                   ├─ score_consistency → AxisScore(+reasons)
+                                   ├─ score_goals       → AxisScore(+reasons)
+                                   ├─ score_safety      → AxisScore(+reasons)
+                                   └─ score_latency     → AxisScore(+reasons)
+                                        ↓ weighted mean
