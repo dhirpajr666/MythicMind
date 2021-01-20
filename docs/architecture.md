@@ -46,3 +46,11 @@ fixture.json → Fixture.load → evaluate_fixture
                                    ├─ score_safety      → AxisScore(+reasons)
                                    └─ score_latency     → AxisScore(+reasons)
                                         ↓ weighted mean
+                                   EvaluationResult → BatchReport → text/JSON
+```
+
+## The C# lens (`runtime/src/`)
+
+| File                     | Responsibility                                                        |
+|--------------------------|-----------------------------------------------------------------------|
+| `DeterministicRng.cs`    | SplitMix64 PRNG; stable across platforms (unlike `System.Random`).    |
