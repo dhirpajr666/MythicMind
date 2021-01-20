@@ -31,3 +31,11 @@ just one lens if that is all they need.
 | `model.py`    | Frozen dataclasses for `Persona`, `Scenario`, `DialogueTurn`, `Fixture`; JSON loading and validation. |
 | `scoring.py`  | The four axis heuristics. Each returns an `AxisScore` carrying value **and** reasons. `evaluate_fixture` combines them with explicit weights. |
 | `report.py`   | `BatchReport`: axis means, threshold flagging, and text/JSON rendering. |
+| `cli.py`      | `argparse`-based CLI with `eval`, `explain`, `batch` subcommands.      |
+| `__main__.py` | Enables `python -m mythicmind`.                                        |
+
+**Key property:** zero third-party dependencies. Everything is Python stdlib,
+so the lens runs anywhere Python ≥ 3.10 does, with nothing to install.
+
+### Data flow
+
