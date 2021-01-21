@@ -54,3 +54,11 @@ fixture.json → Fixture.load → evaluate_fixture
 | File                     | Responsibility                                                        |
 |--------------------------|-----------------------------------------------------------------------|
 | `DeterministicRng.cs`    | SplitMix64 PRNG; stable across platforms (unlike `System.Random`).    |
+| `WorldState.cs`          | Flags, resources, NPC roster, and ordered `Snapshot()` for serialisation. |
+| `Npc.cs`                 | Persona, prioritised `Goal` list, bounded ring-buffer memory, goal selection. |
+| `EncounterDefinition.cs` | JSON schema for encounters + `ToWorld()` materialisation.             |
+| `Simulator.cs`           | Tick loop; produces an `EncounterTranscript`.                         |
+| `Program.cs`             | Console entrypoint; `run` and `replay-check` verbs.                   |
+
+### The tick loop
+
