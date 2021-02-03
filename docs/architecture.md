@@ -62,3 +62,11 @@ fixture.json → Fixture.load → evaluate_fixture
 
 ### The tick loop
 
+Each tick, for every NPC in stable id order:
+
+1. Select the highest-priority goal whose flag preconditions are satisfied
+   (ties broken by goal name → deterministic).
+2. Apply the goal's `sets_flags` to the shared world.
+3. Drift mood slightly toward warmth, with a *seeded* per-(npc, tick) jitter so
+   personalities feel alive without breaking reproducibility.
+4. Append a memory trace (oldest evicted past capacity 16).
