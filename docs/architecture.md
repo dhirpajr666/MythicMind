@@ -70,3 +70,11 @@ Each tick, for every NPC in stable id order:
 3. Drift mood slightly toward warmth, with a *seeded* per-(npc, tick) jitter so
    personalities feel alive without breaking reproducibility.
 4. Append a memory trace (oldest evicted past capacity 16).
+5. Record the utterance in the transcript.
+
+Because every source of variation is seeded and every collection is iterated in
+a stable order, two runs of the same definition serialise to identical bytes —
+which `replay-check` asserts.
+
+## Determinism, precisely
+
