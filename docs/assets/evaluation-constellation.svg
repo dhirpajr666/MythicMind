@@ -11,3 +11,9 @@
     <text x="0" y="10" text-anchor="middle" font-size="9" fill="#8aa0c4">persona</text>
     <text x="0" y="24" text-anchor="middle" font-size="9" fill="#8aa0c4">+ trace</text>
   </g>
+
+  <!-- edges from fixture into the four axes, dashed motion shows the trace being read -->
+  <g stroke="#3d517a" stroke-width="1.6" fill="none">
+    <path d="M104 140 C 190 90, 220 70, 300 70"/>
+    <path d="M104 150 C 190 120, 220 120, 300 120"/>
+    <path d="M104 170 C 190 180, 220 180, 300 180"/>
