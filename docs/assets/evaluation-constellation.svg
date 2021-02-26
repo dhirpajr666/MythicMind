@@ -30,3 +30,9 @@
   <g font-size="12" text-anchor="middle">
     <g transform="translate(360 70)">
       <rect x="-60" y="-18" width="120" height="36" rx="3" fill="#1c2740" stroke="#8ec7a0" stroke-width="1.5"/>
+      <text x="0" y="-1" fill="#f0ead6">consistency</text>
+      <text x="0" y="13" fill="#8aa0c4" font-size="10">weight 0.30</text>
+    </g>
+    <g transform="translate(360 120)">
+      <rect x="-60" y="-18" width="120" height="36" rx="3" fill="#1c2740" stroke="#8ec7a0" stroke-width="1.5"/>
+      <text x="0" y="-1" fill="#f0ead6">goals</text>
