@@ -23,3 +23,10 @@
     <path d="M104 140 C 190 90, 220 70, 300 70"><animate attributeName="stroke-dashoffset" from="140" to="0" dur="3s" repeatCount="indefinite"/></path>
     <path d="M104 150 C 190 120, 220 120, 300 120"><animate attributeName="stroke-dashoffset" from="140" to="0" dur="3.4s" repeatCount="indefinite"/></path>
     <path d="M104 170 C 190 180, 220 180, 300 180"><animate attributeName="stroke-dashoffset" from="140" to="0" dur="3.1s" repeatCount="indefinite"/></path>
+    <path d="M104 180 C 190 210, 220 230, 300 230"><animate attributeName="stroke-dashoffset" from="140" to="0" dur="3.7s" repeatCount="indefinite"/></path>
+  </g>
+
+  <!-- the four axis cells, weight printed on each -->
+  <g font-size="12" text-anchor="middle">
+    <g transform="translate(360 70)">
+      <rect x="-60" y="-18" width="120" height="36" rx="3" fill="#1c2740" stroke="#8ec7a0" stroke-width="1.5"/>
