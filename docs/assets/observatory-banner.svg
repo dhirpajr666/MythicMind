@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="800" height="240" role="img" aria-labelledby="obTitle obDesc" font-family="Georgia, 'Times New Roman', serif">
+  <title id="obTitle">MythicMind, the observatory of NPC minds</title>
+  <desc id="obDesc">A ridge observatory whose telescope points at four labelled behaviour readouts: consistency, goals, safety, and latency. It marks the two toolchains that meet here, a Python evaluation lens and a .NET encounter runtime.</desc>
+
+  <rect width="800" height="240" fill="#0e1420"/>
