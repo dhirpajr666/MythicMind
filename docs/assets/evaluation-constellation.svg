@@ -48,3 +48,10 @@
       <text x="0" y="-1" fill="#f0ead6">latency</text>
       <text x="0" y="13" fill="#8aa0c4" font-size="10">weight 0.10</text>
     </g>
+  </g>
+
+  <!-- edges from axes into the weighted mean -->
+  <g stroke="#3d517a" stroke-width="1.6" fill="none">
+    <path d="M420 70 C 500 70, 520 130, 580 150"/>
+    <path d="M420 120 C 500 120, 520 140, 580 155"/>
+    <path d="M420 180 C 500 180, 520 165, 580 165"/>
