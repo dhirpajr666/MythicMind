@@ -21,3 +21,9 @@
   <g transform="translate(96 176)">
     <rect x="-56" y="-40" width="112" height="40" fill="#1c2740"/>
     <path d="M -50 -40 A 50 34 0 0 1 50 -40 Z" fill="#2a3a5c"/>
+    <line x1="-50" y1="-40" x2="50" y2="-40" stroke="#3d517a" stroke-width="1"/>
+    <!-- open slit -->
+    <rect x="-5" y="-70" width="10" height="34" fill="#0e1420"/>
+    <!-- telescope aimed at the readouts, fixed angle -->
+    <line x1="0" y1="-52" x2="150" y2="-96" stroke="#c99a3f" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="0" cy="-52" r="4" fill="#c99a3f"/>
