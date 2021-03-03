@@ -27,3 +27,8 @@
     <!-- telescope aimed at the readouts, fixed angle -->
     <line x1="0" y1="-52" x2="150" y2="-96" stroke="#c99a3f" stroke-width="4" stroke-linecap="round"/>
     <circle cx="0" cy="-52" r="4" fill="#c99a3f"/>
+  </g>
+
+  <!-- four behaviour readouts the telescope charts -->
+  <g font-size="11" fill="#0e1420" text-anchor="middle">
+    <g transform="translate(300 66)">
