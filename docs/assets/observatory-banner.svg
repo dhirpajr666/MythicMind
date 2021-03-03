@@ -3,3 +3,9 @@
   <desc id="obDesc">A ridge observatory whose telescope points at four labelled behaviour readouts: consistency, goals, safety, and latency. It marks the two toolchains that meet here, a Python evaluation lens and a .NET encounter runtime.</desc>
 
   <rect width="800" height="240" fill="#0e1420"/>
+
+  <!-- horizon band -->
+  <rect x="0" y="176" width="800" height="64" fill="#141c2c"/>
+  <line x1="0" y1="176" x2="800" y2="176" stroke="#26324a" stroke-width="1.5"/>
+
+  <!-- fixed reference stars, no glow, plain marks -->
