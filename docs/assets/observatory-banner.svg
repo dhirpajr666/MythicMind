@@ -32,3 +32,9 @@
   <!-- four behaviour readouts the telescope charts -->
   <g font-size="11" fill="#0e1420" text-anchor="middle">
     <g transform="translate(300 66)">
+      <rect x="-52" y="-15" width="104" height="26" rx="3" fill="#8ec7a0"/>
+      <text y="4">consistency</text>
+    </g>
+    <g transform="translate(300 104)">
+      <rect x="-52" y="-15" width="104" height="26" rx="3" fill="#8ec7a0"/>
+      <text y="4">goals</text>
