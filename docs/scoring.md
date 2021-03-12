@@ -18,3 +18,13 @@ plain weighted mean in `[0, 1]`.
 **Question:** does the NPC stay in voice and avoid forbidden phrasing?
 
 ```
+marker_ratio = (voice markers found in dialogue) / (voice markers defined)
+penalty      = min(0.5, 0.25 × number of distinct forbidden phrases used)
+consistency  = max(0, marker_ratio − penalty)
+```
+
+- If the persona defines **no** voice markers, `marker_ratio` defaults to `0.50`
+  (a neutral base) and a reason states this.
+- Matching is case-insensitive substring matching against the joined NPC turns.
+
+**Example:** 3/3 markers used, no forbidden phrasing → `1.00`. Using two
