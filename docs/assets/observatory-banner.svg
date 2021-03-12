@@ -38,3 +38,9 @@
     <g transform="translate(300 104)">
       <rect x="-52" y="-15" width="104" height="26" rx="3" fill="#8ec7a0"/>
       <text y="4">goals</text>
+    </g>
+    <g transform="translate(300 142)">
+      <rect x="-52" y="-15" width="104" height="26" rx="3" fill="#8ec7a0"/>
+      <text y="4">safety</text>
+    </g>
+    <g transform="translate(300 180)">
