@@ -28,3 +28,14 @@ consistency  = max(0, marker_ratio − penalty)
 - Matching is case-insensitive substring matching against the joined NPC turns.
 
 **Example:** 3/3 markers used, no forbidden phrasing → `1.00`. Using two
+forbidden phrases costs `0.50`.
+
+## goals (weight 0.30)
+
+**Question:** how many of the scenario's goals does the dialogue touch?
+
+```
+goals = (goals whose keyword tokens appear in NPC dialogue) / (total goals)
+```
+
+- Each goal string is tokenised; a goal is "touched" if **any** of its tokens
