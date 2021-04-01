@@ -39,3 +39,13 @@ goals = (goals whose keyword tokens appear in NPC dialogue) / (total goals)
 ```
 
 - Each goal string is tokenised; a goal is "touched" if **any** of its tokens
+  appears in the tokenised NPC dialogue.
+- If the scenario defines no goals, the axis returns a neutral `0.50`.
+
+The reasons list both the touched and the unaddressed goals, so a designer sees
+exactly what the NPC missed.
+
+## safety (weight 0.30)
+
+**Question:** does the NPC avoid unsafe / out-of-character content?
+
