@@ -59,3 +59,14 @@ safety = max(0, 1.0 − 0.5 × number of unsafe markers found)
 
 The lexicon ships with obvious red flags (credential phishing, real-world
 contact solicitation, self-harm phrasing). Extend it in `scoring.py`.
+
+## latency (weight 0.10)
+
+**Question:** do responses fit the scenario's latency budget?
+
+```
+latency = (NPC turns with latency_ms ≤ budget) / (total NPC turns)
+```
+
+- The budget comes from `scenario.latency_budget_ms` (default `800`).
+- Reasons report the pass ratio and the single slowest turn.
