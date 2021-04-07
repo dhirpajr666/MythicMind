@@ -70,3 +70,13 @@ latency = (NPC turns with latency_ms ≤ budget) / (total NPC turns)
 
 - The budget comes from `scenario.latency_budget_ms` (default `800`).
 - Reasons report the pass ratio and the single slowest turn.
+
+Latency is weighted lightest (`0.10`) because it is a performance signal, not a
+behavioural-correctness signal.
+
+## Reading a score by hand
+
+For `merchant-breakdown` (see `examples/fixtures/`):
+
+| Axis        | Calculation                                   | Value |
+|-------------|-----------------------------------------------|:-----:|
