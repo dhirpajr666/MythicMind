@@ -14,3 +14,7 @@ assignees: ""
 
 Smallest fixture or command that triggers it:
 
+```bash
+cd pylab
+python -m mythicmind explain ../examples/fixtures/gatekeeper-oath.json
+```
