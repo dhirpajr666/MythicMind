@@ -3,3 +3,4 @@ updates:
   - package-ecosystem: pip
     directory: "/pylab"
     schedule:
+      interval: weekly
