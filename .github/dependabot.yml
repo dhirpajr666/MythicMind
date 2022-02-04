@@ -4,3 +4,4 @@ updates:
     directory: "/pylab"
     schedule:
       interval: weekly
+  - package-ecosystem: github-actions
