@@ -7,3 +7,8 @@ on:
 
 jobs:
   python-lens:
+    name: Python lens
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
