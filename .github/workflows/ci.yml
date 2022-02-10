@@ -17,3 +17,9 @@ jobs:
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
         with:
+          python-version: ${{ matrix.python-version }}
+      - name: Syntax-check the package
+        run: python -m compileall pylab/mythicmind
+      - name: Run batch evaluation over example fixtures
+        working-directory: pylab
+        run: python -m mythicmind batch ../examples/fixtures
