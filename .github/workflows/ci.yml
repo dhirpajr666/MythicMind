@@ -23,3 +23,8 @@ jobs:
       - name: Run batch evaluation over example fixtures
         working-directory: pylab
         run: python -m mythicmind batch ../examples/fixtures
+      - name: Emit JSON report (smoke)
+        working-directory: pylab
+        run: python -m mythicmind batch ../examples/fixtures --json > /dev/null
+
+  dotnet-lens:
