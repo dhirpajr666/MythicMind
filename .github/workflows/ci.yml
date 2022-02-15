@@ -28,3 +28,8 @@ jobs:
         run: python -m mythicmind batch ../examples/fixtures --json > /dev/null
 
   dotnet-lens:
+    name: C# runtime lens
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up .NET 9
