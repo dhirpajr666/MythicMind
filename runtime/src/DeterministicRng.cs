@@ -44,3 +44,11 @@ public sealed class DeterministicRng
     {
         if (maxExclusive <= 0) throw new ArgumentOutOfRangeException(nameof(maxExclusive));
         return (int)(NextUInt64() % (ulong)maxExclusive);
+    }
+
+    /// <summary>Uniform double in [0, 1).</summary>
+    public double NextDouble()
+    {
+        // Use the top 53 bits for a clean double mantissa.
+        return (NextUInt64() >> 11) * (1.0 / 9007199254740992.0);
+    }
