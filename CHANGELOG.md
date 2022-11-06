@@ -111,4 +111,4 @@ as stable interfaces.
   harness plus deterministic C# encounter runtime), licensing and the
   package skeleton under `pylab/mythicmind/`.
 
-<!-- draft note 725 -->
+<!-- draft note 726 -->
