@@ -10,3 +10,6 @@
     <LangVersion>latest</LangVersion>
     <InvariantGlobalization>true</InvariantGlobalization>
     <Deterministic>true</Deterministic>
+  </PropertyGroup>
+
+</Project>
