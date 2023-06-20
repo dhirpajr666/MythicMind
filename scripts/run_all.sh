@@ -15,3 +15,7 @@ dotnet build -c Release runtime/MythicMind.Runtime.csproj
 echo
 echo "== C# lens: deterministic replay check =="
 dotnet run -c Release --project runtime -- replay-check examples/encounters/the-night-gate.json
+dotnet run -c Release --project runtime -- replay-check examples/encounters/market-haggle.json
+
+echo
+echo "All lenses ran successfully."
