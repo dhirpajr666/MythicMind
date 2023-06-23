@@ -12,3 +12,6 @@ Only implemented foundation work is checked.
 - [ ] Automated pytest and xUnit suites.
 - [ ] Streaming evaluation for large transcript batches.
 - [ ] Lore-grounding and turn-coherence axes.
+- [ ] Automatic transcript-to-fixture conversion.
+- [ ] Multi-step NPC goal planning.
+- [ ] Unity adaptation guide (the current runtime is engine-agnostic, not a Unity package).
