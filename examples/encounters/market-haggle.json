@@ -24,3 +24,11 @@
         {
           "name": "thank-buyer",
           "priority": 3.0,
+          "line": "A pleasure doing business, friend.",
+          "requires": { "deal.closed": "true" },
+          "sets_flags": {}
+        }
+      ]
+    }
+  ]
+}
