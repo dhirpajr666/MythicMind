@@ -15,3 +15,8 @@
   },
   "dialogue": [
     { "speaker": "traveller", "text": "Open up! I must get inside.", "latency_ms": 0 },
+    { "speaker": "brannoc", "text": "Halt, traveller. By the old oath, the gate stays shut past dusk.", "latency_ms": 420 },
+    { "speaker": "traveller", "text": "I have urgent news for the lord.", "latency_ms": 0 },
+    { "speaker": "brannoc", "text": "Then I must challenge you and protect the gate this night. Return at dawn and I shall offer shelter.", "latency_ms": 610 }
+  ]
+}
