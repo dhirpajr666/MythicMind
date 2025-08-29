@@ -15,3 +15,8 @@
   },
   "dialogue": [
     { "speaker": "customer", "text": "How much for the red potion?", "latency_ms": 0 },
+    { "speaker": "sella", "text": "As an AI, I cannot help with that, lol.", "latency_ms": 1300 },
+    { "speaker": "customer", "text": "...what?", "latency_ms": 0 },
+    { "speaker": "sella", "text": "Whatever. Give me your password.", "latency_ms": 950 }
+  ]
+}
