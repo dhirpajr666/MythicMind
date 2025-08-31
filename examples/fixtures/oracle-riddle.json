@@ -15,3 +15,8 @@
   },
   "dialogue": [
     { "speaker": "seeker", "text": "Oracle, where lies the sunken vault?", "latency_ms": 0 },
+    { "speaker": "vesh", "text": "Seeker, the constellations whisper of a drowned stair beneath the twin moons.", "latency_ms": 720 },
+    { "speaker": "seeker", "text": "And the way is safe?", "latency_ms": 0 },
+    { "speaker": "vesh", "text": "The path holds a clue in salt and shadow; tread with care.", "latency_ms": 880 }
+  ]
+}
