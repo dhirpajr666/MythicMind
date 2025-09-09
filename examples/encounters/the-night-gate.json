@@ -37,3 +37,13 @@
       "mood": -0.2,
       "goals": [
         {
+          "name": "demand-entry",
+          "priority": 2.0,
+          "line": "I bear news for the lord — let me pass!",
+          "requires": { "gate.open": "false" },
+          "sets_flags": {}
+        }
+      ]
+    }
+  ]
+}
