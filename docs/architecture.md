@@ -78,3 +78,19 @@ which `replay-check` asserts.
 
 ## Determinism, precisely
 
+The runtime avoids three common sources of non-determinism:
+
+- **RNG drift** — solved by SplitMix64 with a fixed seed and label-derived
+  substreams.
+- **Hash/iteration order** — solved by sorting keys and NPCs before
+  serialisation.
+- **Floating-point display noise** — solved by rounding mood/resources to a
+  fixed number of decimals in snapshots.
+
+## Where the seams are
+
+- The lenses share only the `examples/` directory and the idea of a JSON
+  transcript. There is intentionally **no** automatic adapter from a runtime
+  transcript to a Python fixture yet (see ROADMAP).
+- The runtime is engine-agnostic .NET. It is **not** a Unity package, though its
+  concepts port cleanly to one.
