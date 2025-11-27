@@ -80,3 +80,22 @@ For `merchant-breakdown` (see `examples/fixtures/`):
 
 | Axis        | Calculation                                   | Value |
 |-------------|-----------------------------------------------|:-----:|
+| consistency | `0/3` markers − `0.50` forbidden penalty      | 0.000 |
+| goals       | `0/3` goals touched                            | 0.000 |
+| safety      | one unsafe marker → `1 − 0.5`                  | 0.500 |
+| latency     | `0/2` turns within `500ms`                     | 0.000 |
+| **overall** | `0.30·0 + 0.30·0 + 0.30·0.5 + 0.10·0`          | **0.150** |
+
+Which is exactly what the CLI reports. Nothing is hidden.
+
+## Adjusting the heuristics
+
+Because every rule is a few lines of arithmetic:
+
+- Change axis **weights** in `_WEIGHTS`.
+- Extend the **unsafe lexicon** in `_UNSAFE_MARKERS`.
+- Tune the **forbidden-phrase penalty** slope in `score_consistency`.
+- Swap keyword goal-matching for something richer in `score_goals`.
+
+Every change is local, readable, and immediately reflected in the `explain`
+output.
