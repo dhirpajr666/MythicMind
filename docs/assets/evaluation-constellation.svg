@@ -55,3 +55,15 @@
     <path d="M420 70 C 500 70, 520 130, 580 150"/>
     <path d="M420 120 C 500 120, 520 140, 580 155"/>
     <path d="M420 180 C 500 180, 520 165, 580 165"/>
+    <path d="M420 230 C 500 230, 520 190, 580 175"/>
+  </g>
+
+  <!-- weighted overall score node -->
+  <g transform="translate(630 160)">
+    <circle r="42" fill="#1c2740" stroke="#c99a3f" stroke-width="2"/>
+    <text x="0" y="-6" text-anchor="middle" font-size="11" fill="#8aa0c4">overall</text>
+    <text x="0" y="14" text-anchor="middle" font-size="14" fill="#f0ead6">0..1</text>
+  </g>
+
+  <text x="360" y="300" text-anchor="middle" font-size="11" fill="#6b7fa0">weighted mean of four explainable axes, every reason traceable to scoring.py</text>
+</svg>
