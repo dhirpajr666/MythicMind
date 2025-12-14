@@ -44,3 +44,14 @@
       <text y="4">safety</text>
     </g>
     <g transform="translate(300 180)">
+      <rect x="-52" y="-15" width="104" height="26" rx="3" fill="#c99a3f"/>
+      <text y="4">latency</text>
+    </g>
+  </g>
+
+  <!-- title block -->
+  <text x="420" y="90" font-size="44" fill="#f0ead6" font-weight="bold" letter-spacing="1">MythicMind</text>
+  <text x="422" y="118" font-size="15" fill="#c99a3f" letter-spacing="3">THE OBSERVATORY OF NPC MINDS</text>
+  <text x="422" y="150" font-family="Consolas, monospace" font-size="12" fill="#8aa0c4">python evaluation lens  +  .net 9 encounter runtime</text>
+  <text x="422" y="170" font-family="Consolas, monospace" font-size="11" fill="#6b7fa0">score, explain, simulate, replay</text>
+</svg>
