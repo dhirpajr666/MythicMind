@@ -51,3 +51,7 @@ public sealed class DeterministicRng
     {
         // Use the top 53 bits for a clean double mantissa.
         return (NextUInt64() >> 11) * (1.0 / 9007199254740992.0);
+    }
+}
+
+<!-- draft note 1406 -->
