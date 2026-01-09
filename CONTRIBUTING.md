@@ -33,3 +33,11 @@ dotnet run -c Release --project runtime -- replay-check examples/encounters/the-
    fixture that demonstrates it.
 4. Keep the Python lens dependency-free; the zero-dependency rule is part of
    the design contract.
+
+## Pull requests
+
+- One topic per PR, conventional commit titles (`feat:`, `fix:`, `docs:`...).
+- Describe the motivation, not just the diff.
+- By participating you agree to the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+<!-- draft note 1408 -->
