@@ -277,3 +277,42 @@ mythicmind/
 
 Both lenses have been compiled and run on the reference environment (Python 3.11, .NET SDK 9.0.101).
 
+```bash
+# Python: no dependencies to install; just run it.
+cd pylab && python -m mythicmind batch ../examples/fixtures
+
+# C#: restore, build, run.
+cd runtime && dotnet build -c Release
+```
+
+The top-level `Makefile` wraps both:
+
+```bash
+make py       # run the Python batch report over the example fixtures
+make dotnet   # build the runtime and replay-check the example encounters
+make all      # both
+```
+
+On Windows without `make`, use `scripts\run_all.ps1`.
+
+---
+
+## Design vows
+
+1. Explainable over clever. Every Python score comes with reasons; no hidden models.
+2. Deterministic over convenient. The runtime never uses an unstable RNG; replay is sacred.
+3. Honest over impressive. The [ROADMAP](ROADMAP.md) lists only foundation milestones that are actually done, and keeps aspirations under "not yet started."
+4. Standard library over dependencies. The Python lens has zero third-party requirements.
+
+---
+
+## Further reading
+
+- [`docs/architecture.md`](docs/architecture.md): how the pieces fit together.
+- [`docs/scoring.md`](docs/scoring.md): the heuristics, axis by axis.
+- [`ROADMAP.md`](ROADMAP.md): what is built and what is not.
+- [`CHANGELOG.md`](CHANGELOG.md): the logbook.
+
+<p align="center"><sub>MythicMind, the observatory of NPC minds. MIT licensed. Built with Python stdlib and .NET 9.</sub></p>
+
+<!-- draft note 1414 -->
