@@ -18,3 +18,11 @@ Smallest fixture or command that triggers it:
 cd pylab
 python -m mythicmind explain ../examples/fixtures/gatekeeper-oath.json
 ```
+
+**Environment**
+
+- OS:
+- Python version (`python --version`):
+- MythicMind version (`python -m mythicmind --version`):
+
+<!-- draft note 1413 -->
