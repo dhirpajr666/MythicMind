@@ -58,3 +58,16 @@ public static class Simulator
                 var npcRng = DeterministicRng.FromLabel(def.Seed, $"{npc.Id}:{t}");
                 double jitter = (npcRng.NextDouble() - 0.5) * 0.05;
                 npc.Mood = Math.Clamp(npc.Mood + 0.03 + jitter, -1.0, 1.0);
+
+                npc.Remember(new MemoryTrace(t, "acted", goal.Name, goal.Priority));
+
+                dialogue.Add(new TranscriptLine(
+                    t, npc.Id, goal.Name, goal.Line, Math.Round(npc.Mood, 4)));
+            }
+        }
+
+        return new EncounterTranscript(def.Name, def.Seed, def.Ticks, dialogue, world.Snapshot());
+    }
+}
+
+<!-- draft note 1415 -->
