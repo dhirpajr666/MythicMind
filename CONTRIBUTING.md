@@ -40,4 +40,4 @@ dotnet run -c Release --project runtime -- replay-check examples/encounters/the-
 - Describe the motivation, not just the diff.
 - By participating you agree to the [Code of Conduct](CODE_OF_CONDUCT.md).
 
-<!-- draft note 1408 -->
+<!-- draft note 1419 -->
