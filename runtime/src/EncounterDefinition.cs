@@ -65,3 +65,18 @@ public sealed class EncounterDefinition
 public sealed class NpcDefinition
 {
     [JsonPropertyName("id")] public string Id { get; set; } = "npc";
+    [JsonPropertyName("persona")] public string Persona { get; set; } = "";
+    [JsonPropertyName("mood")] public double Mood { get; set; }
+    [JsonPropertyName("goals")] public List<GoalDefinition> Goals { get; set; } = new();
+}
+
+public sealed class GoalDefinition
+{
+    [JsonPropertyName("name")] public string Name { get; set; } = "idle";
+    [JsonPropertyName("priority")] public double Priority { get; set; } = 1.0;
+    [JsonPropertyName("line")] public string Line { get; set; } = "...";
+    [JsonPropertyName("requires")] public Dictionary<string, string> Requires { get; set; } = new();
+    [JsonPropertyName("sets_flags")] public Dictionary<string, string> SetsFlags { get; set; } = new();
+}
+
+<!-- draft note 1424 -->
