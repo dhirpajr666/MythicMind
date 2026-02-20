@@ -71,3 +71,7 @@ class BatchReport:
                 for a in r.axes:
                     if a.value < threshold:
                         lines.append(f"      {a.name}: {a.value:.3f} - {a.reasons[0] if a.reasons else ''}")
+        lines.append("=" * 60)
+        return "\n".join(lines)
+
+# draft note 1422
