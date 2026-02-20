@@ -315,4 +315,4 @@ On Windows without `make`, use `scripts\run_all.ps1`.
 
 <p align="center"><sub>MythicMind, the observatory of NPC minds. MIT licensed. Built with Python stdlib and .NET 9.</sub></p>
 
-<!-- draft note 1414 -->
+<!-- draft note 1423 -->
