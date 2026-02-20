@@ -63,3 +63,17 @@ public sealed class Npc
     {
         return Goals
             .Where(g => g.IsSatisfiable(world))
+            .OrderByDescending(g => g.Priority)
+            .ThenBy(g => g.Name, StringComparer.Ordinal)
+            .FirstOrDefault();
+    }
+
+    public NpcSnapshot Snapshot() => new(
+        Id, Persona, Math.Round(Mood, 4),
+        _memory.Select(m => $"[{m.Tick}] {m.Kind}: {m.Detail}").ToList());
+}
+
+public sealed record NpcSnapshot(
+    string Id, string Persona, double Mood, List<string> Memory);
+
+<!-- draft note 1425 -->
