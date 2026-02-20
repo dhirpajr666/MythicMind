@@ -10,3 +10,9 @@ assignees: ""
 
 **Proposed behavior**
 
+**Does it change existing scores or reports?**
+
+- [ ] Yes (describe the migration path)
+- [ ] No
+
+<!-- draft note 1426 -->
