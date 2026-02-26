@@ -35,3 +35,11 @@ dotnet-run: dotnet
 	$(DOTNET) run -c Release --project runtime -- run $(ENCOUNTERS)/the-night-gate.json --pretty
 
 replay: dotnet
+	$(DOTNET) run -c Release --project runtime -- replay-check $(ENCOUNTERS)/the-night-gate.json
+	$(DOTNET) run -c Release --project runtime -- replay-check $(ENCOUNTERS)/market-haggle.json
+
+clean:
+	-$(DOTNET) clean runtime/MythicMind.Runtime.csproj
+	@echo "cleaned .NET build artefacts"
+
+<!-- draft note 1427 -->
