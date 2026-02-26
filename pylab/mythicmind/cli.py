@@ -90,3 +90,23 @@ def build_parser() -> argparse.ArgumentParser:
     p_explain.add_argument("fixture", help="path to a fixture JSON file")
     p_explain.set_defaults(func=_cmd_explain)
 
+    p_batch = sub.add_parser("batch", help="score many fixtures and aggregate")
+    p_batch.add_argument("paths", nargs="+", help="fixture files or directories")
+    p_batch.add_argument("--json", action="store_true", help="emit JSON")
+    p_batch.add_argument("--threshold", type=float, default=0.6,
+                         help="review threshold for flagging (default 0.6)")
+    p_batch.set_defaults(func=_cmd_batch)
+
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = build_parser()
+    args = parser.parse_args(argv)
+    return args.func(args)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+
+# draft note 1429
