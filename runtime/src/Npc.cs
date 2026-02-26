@@ -76,4 +76,4 @@ public sealed class Npc
 public sealed record NpcSnapshot(
     string Id, string Persona, double Mood, List<string> Memory);
 
-<!-- draft note 1425 -->
+<!-- draft note 1428 -->
