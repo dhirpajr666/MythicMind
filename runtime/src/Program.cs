@@ -116,3 +116,26 @@ int CmdReplayCheck(string[] args)
     var opts = new JsonSerializerOptions { WriteIndented = false };
 
     string a = JsonSerializer.Serialize(Simulator.Run(def), opts);
+    string b = JsonSerializer.Serialize(Simulator.Run(EncounterDefinition.Load(args[1])), opts);
+
+    if (string.Equals(a, b, StringComparison.Ordinal))
+    {
+        Console.WriteLine($"OK: '{def.Name}' replays deterministically ({a.Length} bytes).");
+        return 0;
+    }
+
+    Console.Error.WriteLine($"FAIL: '{def.Name}' produced divergent transcripts.");
+    return 1;
+}
+
+void PrintUsage()
+{
+    Console.WriteLine(
+        "mythicmind runtime — deterministic NPC encounter simulator\n\n" +
+        "Usage:\n" +
+        "  mythicmind run <encounter.json> [--out <file>] [--pretty]\n" +
+        "  mythicmind replay-check <encounter.json>\n" +
+        "  mythicmind help\n");
+}
+
+<!-- draft note 1435 -->
