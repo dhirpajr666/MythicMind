@@ -79,4 +79,4 @@ public sealed class GoalDefinition
     [JsonPropertyName("sets_flags")] public Dictionary<string, string> SetsFlags { get; set; } = new();
 }
 
-<!-- draft note 1424 -->
+<!-- draft note 1437 -->
