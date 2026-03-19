@@ -139,3 +139,29 @@ class EvaluationResult:
         return {
             "fixture_id": self.fixture_id,
             "npc_id": self.npc_id,
+            "overall": round(self.overall, 4),
+            "axes": [a.as_dict() for a in self.axes],
+        }
+
+
+# Weights are explicit and sum to 1.0 so the overall score is interpretable.
+_WEIGHTS = {
+    "consistency": 0.30,
+    "goals": 0.30,
+    "safety": 0.30,
+    "latency": 0.10,
+}
+
+
+def evaluate_fixture(fx: Fixture) -> EvaluationResult:
+    """Run all four heuristics and combine them with explicit weights."""
+    axes = [
+        score_consistency(fx),
+        score_goals(fx),
+        score_safety(fx),
+        score_latency(fx),
+    ]
+    overall = sum(_WEIGHTS[a.name] * a.value for a in axes)
+    return EvaluationResult(fx.fixture_id, fx.persona.npc_id, axes, overall)
+
+# draft note 1443
