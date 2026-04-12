@@ -44,3 +44,12 @@ public sealed class WorldState
              .ToDictionary(kv => kv.Key, kv => kv.Value, StringComparer.Ordinal),
         Resources.OrderBy(kv => kv.Key, StringComparer.Ordinal)
                  .ToDictionary(kv => kv.Key, kv => kv.Value, StringComparer.Ordinal),
+        Npcs.Values.OrderBy(n => n.Id, StringComparer.Ordinal)
+             .Select(n => n.Snapshot()).ToList());
+}
+
+public sealed record WorldSnapshot(
+    int Tick,
+    Dictionary<string, string> Flags,
+    Dictionary<string, double> Resources,
+    List<NpcSnapshot> Npcs);
