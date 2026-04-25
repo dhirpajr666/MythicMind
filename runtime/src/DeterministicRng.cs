@@ -53,5 +53,3 @@ public sealed class DeterministicRng
         return (NextUInt64() >> 11) * (1.0 / 9007199254740992.0);
     }
 }
-
-<!-- draft note 1406 -->
