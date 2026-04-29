@@ -137,5 +137,3 @@ void PrintUsage()
         "  mythicmind replay-check <encounter.json>\n" +
         "  mythicmind help\n");
 }
-
-<!-- draft note 1435 -->
