@@ -69,5 +69,3 @@ public static class Simulator
         return new EncounterTranscript(def.Name, def.Seed, def.Ticks, dialogue, world.Snapshot());
     }
 }
-
-<!-- draft note 1444 -->
