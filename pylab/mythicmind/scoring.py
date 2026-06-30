@@ -163,5 +163,3 @@ def evaluate_fixture(fx: Fixture) -> EvaluationResult:
     ]
     overall = sum(_WEIGHTS[a.name] * a.value for a in axes)
     return EvaluationResult(fx.fixture_id, fx.persona.npc_id, axes, overall)
-
-# draft note 1443
