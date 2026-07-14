@@ -20,3 +20,8 @@ __all__ = [
     "Persona",
     "Scenario",
     "DialogueTurn",
+    "Fixture",
+    "evaluate_fixture",
+    "EvaluationResult",
+    "__version__",
+]
