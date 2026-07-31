@@ -27,3 +27,9 @@ dependencies = []
 [project.scripts]
 mythicmind = "mythicmind.cli:main"
 
+[project.urls]
+Homepage = "https://github.com/dhirpajr666/MythicMind"
+Changelog = "https://github.com/dhirpajr666/MythicMind/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+packages = ["mythicmind"]
