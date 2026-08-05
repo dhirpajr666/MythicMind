@@ -99,5 +99,3 @@ class Fixture:
         """Only the NPC's own utterances (the thing under evaluation)."""
         pid = self.persona.npc_id
         return [t for t in self.dialogue if t.speaker in (pid, "npc")]
-
-# draft note 1438
