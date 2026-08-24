@@ -314,5 +314,3 @@ On Windows without `make`, use `scripts\run_all.ps1`.
 - [`CHANGELOG.md`](CHANGELOG.md): the logbook.
 
 <p align="center"><sub>MythicMind, the observatory of NPC minds. MIT licensed. Built with Python stdlib and .NET 9.</sub></p>
-
-<!-- draft note 1423 -->
