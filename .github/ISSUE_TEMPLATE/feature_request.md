@@ -14,5 +14,3 @@ assignees: ""
 
 - [ ] Yes (describe the migration path)
 - [ ] No
-
-<!-- draft note 1439 -->
