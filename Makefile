@@ -41,5 +41,3 @@ replay: dotnet
 clean:
 	-$(DOTNET) clean runtime/MythicMind.Runtime.csproj
 	@echo "cleaned .NET build artefacts"
-
-<!-- draft note 1427 -->
