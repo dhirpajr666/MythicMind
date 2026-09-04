@@ -110,5 +110,3 @@ as stable interfaces.
 - Initial repository layout: the two-lens design sketch (Python evaluation
   harness plus deterministic C# encounter runtime), licensing and the
   package skeleton under `pylab/mythicmind/`.
-
-<!-- draft note 1405 -->
