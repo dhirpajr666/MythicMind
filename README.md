@@ -109,6 +109,8 @@ python -m mythicmind batch ../examples/fixtures --json
 ```
 
 The three verbs (`eval`, `explain`, `batch`) are defined in `pylab/mythicmind/cli.py`.
+`eval` and `batch` also accept `--json` for pipelines; `explain` always prints the
+reasoning chain in plain text.
 
 ### What a report shows
 
