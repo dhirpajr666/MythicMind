@@ -22,7 +22,9 @@ directory. This document describes how each is built and where the seams are.
 
 The two lenses do not import each other. They meet only through JSON on disk.
 This keeps each side simple and independently testable, and lets a team adopt
-just one lens if that is all they need.
+just one lens if that is all they need. Because the seam is data, either lens can
+be vendored into a larger repository on its own: nothing under `pylab/` imports
+from `runtime/`, and nothing under `runtime/` imports from `pylab/`.
 
 ## The Python lens (`pylab/mythicmind/`)
 
