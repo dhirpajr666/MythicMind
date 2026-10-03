@@ -18,9 +18,19 @@ import json
 import sys
 from pathlib import Path
 
+from . import __version__
 from .model import Fixture
 from .report import BatchReport
 from .scoring import evaluate_fixture
+
+
+def _load_fixture(path: str) -> Fixture | None:
+    """Load a fixture, reporting malformed files as a one-line error."""
+    try:
+        return Fixture.load(path)
+    except (OSError, ValueError, KeyError) as exc:
+        print(f"error: cannot load fixture {path}: {exc}", file=sys.stderr)
+        return None
 
 
 def _collect_fixtures(paths: list[str]) -> list[Path]:
@@ -37,7 +47,9 @@ def _collect_fixtures(paths: list[str]) -> list[Path]:
 
 
 def _cmd_eval(args: argparse.Namespace) -> int:
-    fx = Fixture.load(args.fixture)
+    fx = _load_fixture(args.fixture)
+    if fx is None:
+        return 1
     result = evaluate_fixture(fx)
     if args.json:
         print(json.dumps(result.as_dict(), indent=2))
@@ -49,7 +61,9 @@ def _cmd_eval(args: argparse.Namespace) -> int:
 
 
 def _cmd_explain(args: argparse.Namespace) -> int:
-    fx = Fixture.load(args.fixture)
+    fx = _load_fixture(args.fixture)
+    if fx is None:
+        return 1
     result = evaluate_fixture(fx)
     print(f"fixture: {fx.fixture_id}  (npc={fx.persona.npc_id})")
     print(f"overall: {result.overall:.3f}")
@@ -65,7 +79,12 @@ def _cmd_batch(args: argparse.Namespace) -> int:
     if not files:
         print("error: no fixtures found", file=sys.stderr)
         return 1
-    results = [evaluate_fixture(Fixture.load(f)) for f in files]
+    results = []
+    for f in files:
+        fx = _load_fixture(f)
+        if fx is None:
+            return 1
+        results.append(evaluate_fixture(fx))
     report = BatchReport(results)
     if args.json:
         print(json.dumps(report.as_dict(), indent=2))
@@ -79,6 +98,8 @@ def build_parser() -> argparse.ArgumentParser:
         prog="mythicmind",
         description="Explainable AI NPC behaviour evaluation lab (stdlib only).",
     )
+    parser.add_argument("--version", action="version",
+                        version="%(prog)s " + __version__)
     sub = parser.add_subparsers(dest="command", required=True)
 
     p_eval = sub.add_parser("eval", help="score a single fixture")
