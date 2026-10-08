@@ -6,6 +6,15 @@ semantic versioning since `1.0.0`.
 
 ## [Unreleased]
 
+### Added
+
+- `--version` prints the package version from the command line.
+
+### Fixed
+
+- A malformed or unreadable fixture now reports a one-line error instead of a
+  traceback, and `batch` stops before emitting a partial report.
+
 ### Planned
 
 - Streaming evaluation for large transcript batches (see ROADMAP).
