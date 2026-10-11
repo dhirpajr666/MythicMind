@@ -11,6 +11,7 @@ Only implemented foundation work is checked.
 ## Planned
 - [ ] Automated pytest and xUnit suites.
 - [ ] Streaming evaluation for large transcript batches.
+- [ ] A `--summary` mode printing only the counts, for dashboards and CI logs.
 - [ ] Lore-grounding and turn-coherence axes.
 - [ ] Automatic transcript-to-fixture conversion.
 - [ ] Multi-step NPC goal planning.
