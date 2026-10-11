@@ -10,6 +10,7 @@ Only implemented foundation work is checked.
 
 ## Planned
 - [ ] Automated pytest and xUnit suites.
+- [ ] Optional axis weights loaded from a `weights.json` beside a fixture set.
 - [ ] Streaming evaluation for large transcript batches.
 - [ ] Lore-grounding and turn-coherence axes.
 - [ ] Automatic transcript-to-fixture conversion.
