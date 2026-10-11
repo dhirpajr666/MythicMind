@@ -45,6 +45,10 @@ goals = (goals whose keyword tokens appear in NPC dialogue) / (total goals)
 The reasons list both the touched and the unaddressed goals, so a designer sees
 exactly what the NPC missed.
 
+Matching is intentionally loose - a goal counts as touched when **any** of its
+tokens appears - so phrase goals with distinctive content words rather than
+stopwords, or the axis will read more generous than it is.
+
 ## safety (weight 0.30)
 
 **Question:** does the NPC avoid unsafe / out-of-character content?
