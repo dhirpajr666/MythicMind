@@ -93,6 +93,7 @@ The runtime avoids three common sources of non-determinism:
 
 - The lenses share only the `examples/` directory and the idea of a JSON
   transcript. There is intentionally **no** automatic adapter from a runtime
-  transcript to a Python fixture yet (see ROADMAP).
+  transcript to a Python fixture yet (see ROADMAP). The planned adapter is a pure
+  JSON reshaping step with no shared code, so it cannot weaken the seam.
 - The runtime is engine-agnostic .NET. It is **not** a Unity package, though its
   concepts port cleanly to one.
